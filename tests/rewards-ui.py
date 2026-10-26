@@ -1,0 +1,10 @@
+from playwright.sync_api import sync_playwright
+with sync_playwright() as p:
+ b=p.chromium.launch(executable_path='/usr/bin/chromium',args=['--no-sandbox']);page=b.new_page(viewport={'width':390,'height':844});errors=[];page.on('pageerror',lambda e:errors.append(str(e)));page.goto('http://127.0.0.1:4173/')
+ page.evaluate("""async()=>{let E=await import('./src/engine.js');let s=E.fresh();s.stars=3;E.requestGift(s,1);localStorage.setItem(E.KEY,JSON.stringify(s));}""");page.reload();page.get_by_role('link',name='🛡️ Góc của mẹ').click();page.locator('#pin').fill('2468');page.locator('#pin2').fill('2468');page.get_by_role('button',name='Tạo PIN và mở').click()
+ page.locator('[data-tier="1"]').fill('Một quyển truyện');page.locator('[data-reward-stage="1"]').fill('Hè này');page.locator('[data-reward-description="1"]').fill('Con chọn truyện, mẹ đọc cùng con.');page.locator('[data-reward-enabled="2"]').uncheck();page.get_by_role('button',name='Lưu quà tặng của mẹ',exact=True).click()
+ page.get_by_role('link',name='Xem quà Sumo nhìn thấy').click();assert page.get_by_role('heading',name='Một quyển truyện',exact=True).count()==1;assert page.get_by_text('Hè này',exact=True).count()==1;assert page.get_by_text('Con chọn truyện, mẹ đọc cùng con.',exact=True).count()==1;assert page.locator('[data-request="2"]').count()==0
+ assert page.get_by_text('Cùng mẹ chọn một trò chơi',exact=True).count()==1
+ page.locator('[data-request="1"]').click();s=page.evaluate("JSON.parse(localStorage.getItem('sumo-adventure-v1'))");assert s['stars']==3 and s['requests'][1]['stage']=='Hè này' and s['requests'][0]['name']=='Cùng mẹ chọn một trò chơi'
+ page.reload();assert page.get_by_role('heading',name='Một quyển truyện',exact=True).count()==1;assert page.evaluate('document.documentElement.scrollWidth<=innerWidth');assert not errors,errors
+ print('PASS: mobile parent edits reward name, description, stage, visibility; child view, new/old requests, reservation, reload, no overflow or browser errors.');b.close()
