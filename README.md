@@ -18,3 +18,10 @@ Mẹ chỉnh bài, ví dụ, chủ đề, mốc quà, tên/giá đồ trong Góc
 
 ## Kiểm tra giao diện đã thực hiện
 `python3 tests/browser.py` dùng Playwright Python và Chromium có sẵn trong môi trường QA (không phải dependency của trò chơi), với máy chủ đang chạy cổng 4173. Kịch bản đi hết 20 lượt luyện và 10 câu cuối cấp trên màn hình 390px, kiểm tra tải lại, trang bị đồ, PIN, tải sao lưu, đổi/duyệt/trao quà và ôn cấp sau. Kiểm tra Node độc lập không cần Playwright. Không coi kiểm tra giao diện này là kiểm duyệt ngôn ngữ hay xác minh triển khai công khai.
+
+## Biểu tượng điện thoại và chuyển tiến độ
+Ứng dụng PWA có manifest, icon gốc PNG và service worker cache toàn bộ bài học/UI theo phạm vi repository. iPhone: Safari → Chia sẻ → Thêm vào Màn hình chính. Android: Chrome → menu → Cài đặt ứng dụng. Mở một lần khi có mạng trước khi học ngoại tuyến. Âm thanh phụ thuộc giọng đọc thiết bị. Bản cập nhật được dùng sau khi đóng tất cả cửa sổ ứng dụng rồi mở lại; workflow gắn mã commit vào tên cache để tránh giữ mã cũ vô thời hạn.
+
+GitHub Pages không có máy chủ đồng bộ. Góc của mẹ → Tạo liên kết chuyển tiến độ tạo bản chụp nén trong phần fragment của URL (không gửi fragment đến máy chủ HTTP). Chỉ gửi riêng: ai có liên kết có thể đọc tiến độ và lịch sử quà. PIN bị loại bỏ. Thiết bị nhận giữ PIN riêng, yêu cầu mở PIN nếu đã thiết lập, xác nhận thay dữ liệu và không hợp nhất/phát thêm thưởng. Luôn chuyển từ thiết bị học gần nhất. Liên kết quá dài hoặc thiết bị không hỗ trợ nén: dùng tệp sao lưu JSON. Trên iOS, Safari và ứng dụng đã cài có thể dùng vùng lưu trữ khác; trong ứng dụng, Góc của mẹ có ô dán liên kết để nhận trực tiếp. Không tuyên bố đồng bộ tự động hay đã kiểm thử cài đặt trên thiết bị iOS thật.
+
+Kiểm thử chuyển và offline: `python3 tests/devices.py` khi server cổng 4173 đang chạy; dùng hai browser context độc lập, kiểm tra nhận/giữ PIN, chặng học, số dư, trang phục, bài học và icon ngoại tuyến.

@@ -26,8 +26,9 @@ jobs:
       - name: Chuẩn bị trang tĩnh
         run: |
           mkdir _site
-          cp index.html _site/
-          cp -r src data _site/
+          cp index.html manifest.webmanifest sw.js _site/
+          cp -r src data icons _site/
+          sed -i "s/sumo-static-v1/sumo-static-${GITHUB_SHA}/" _site/sw.js
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
