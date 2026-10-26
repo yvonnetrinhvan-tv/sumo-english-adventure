@@ -15,3 +15,6 @@ Workflow `.github/workflows/pages.yml` kiểm thử rồi triển khai khi đẩ
 Không theo dõi, quảng cáo, SDK ngoài hay thu thập thông tin trẻ. PIN băm SHA-256 kèm salt là chốt cửa đơn giản trên máy, không xác thực an toàn. Tiến độ có thể bị sửa trong trình duyệt; không có giá trị tiền thật. Giá món quà 5 sao được mẹ xác nhận, luôn dưới 500.000 đồng. Không chuyển đổi sao và xu.
 
 Mẹ chỉnh bài, ví dụ, chủ đề, mốc quà, tên/giá đồ trong Góc của mẹ. Nhập JSON theo bản xuất hoặc CSV có cột `level` cùng các trường mục học; cấp liên tiếp đủ 20 mục, không trùng ID/từ. Nhập thay cả bộ; giữ ID ổn định khi chỉnh. Validator kiểm tra cấu trúc, tính duy nhất và cụm từ xuất hiện trong ví dụ, không thay thế kiểm duyệt ngôn ngữ. Bản sao lưu chứa cả nội dung tùy chỉnh, PIN băm và tiến độ.
+
+## Kiểm tra giao diện đã thực hiện
+`python3 tests/browser.py` dùng Playwright Python và Chromium có sẵn trong môi trường QA (không phải dependency của trò chơi), với máy chủ đang chạy cổng 4173. Kịch bản đi hết 20 lượt luyện và 10 câu cuối cấp trên màn hình 390px, kiểm tra tải lại, trang bị đồ, PIN, tải sao lưu, đổi/duyệt/trao quà và ôn cấp sau. Kiểm tra Node độc lập không cần Playwright. Không coi kiểm tra giao diện này là kiểm duyệt ngôn ngữ hay xác minh triển khai công khai.
