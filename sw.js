@@ -1,4 +1,4 @@
-const CACHE='sumo-static-v1';
+const CACHE='sumo-static-v2';
 const FILES=['./','./index.html','./manifest.webmanifest','./src/app.js','./src/engine.js','./src/avatar.js','./src/illustration.js','./src/transfer.js','./src/style.css','./data/curriculum.json','./icons/sumo-192.png','./icons/sumo-512.png','./icons/apple-touch-icon.png'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES)));});
 // A new version activates after all old app windows close, avoiding mixed module versions.
