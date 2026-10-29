@@ -10,6 +10,8 @@ with sync_playwright() as p:
  page.goto(base);page.get_by_role('button',name='Tiếp tục khám phá').click()
  def answer():
   h=page.locator('.card h2').inner_text()
+  if h.startswith('Hình này'):
+   icon=page.locator('.card .word-picture').inner_text();page.get_by_role('button',name=next(e['english'] for e in content[0]['items'] if e['icon']==icon),exact=True).click();page.get_by_role('button',name='Tiếp tục →',exact=True).click();return
   if page.locator('#answer').count():
    meaning=h.split('“')[1].split('”')[0];e=next(e for e in content[0]['items'] if e['meaning']==meaning);page.locator('#answer').fill(e['english']);page.get_by_role('button',name='Kiểm tra',exact=True).click()
   else:

@@ -3,7 +3,7 @@
 Trò chơi tĩnh miễn phí bằng HTML/CSS/JavaScript, không cần gói npm, tài khoản hoặc máy chủ dữ liệu. Tiến độ ở localStorage, sao lưu JSON trong Góc của mẹ.
 
 ## Nội dung thực tế
-5 cấp đã biên soạn, 100 mục riêng biệt. Bản đồ hiển thị 100 cấp, 95 cấp chưa có nội dung được khóa rõ ràng. Không tuyên bố đã hoàn thành 2.000 mục. Câu hỏi dùng nghĩa, nghe (có chữ thay thế), chọn từ, gõ chính tả và hiểu câu mẫu. Biểu tượng chủ đề không phải hình riêng của từng từ; chưa có hoạt động nhận dạng ảnh riêng. IPA và gợi âm tiếng Việt chưa kiểm chứng được bỏ trống/ghi rõ trạng thái. Giọng đọc tiếng Anh dùng speechSynthesis của thiết bị, khả năng hoạt động ngoại tuyến tùy gói giọng đã cài.
+5 cấp đã biên soạn, 100 mục riêng biệt. Bản đồ hiển thị 100 cấp, 95 cấp chưa có nội dung được khóa rõ ràng. Không tuyên bố đã hoàn thành 2.000 mục. Câu hỏi dùng nghĩa, nghe (có chữ thay thế), chọn từ, gõ chính tả và hiểu câu mẫu. Thẻ học hiển thị emoji minh họa riêng cho từng từ (hệ thống tự vẽ, không tải ảnh ngoài); có dạng câu hỏi nhìn hình chọn từ tiếng Anh. IPA kiểu Mỹ đối chiếu từ điển CMU; gợi âm tiếng Việt và mẹo nhớ do biên soạn, chỉ gần đúng. Từ nào cần xác nhận thêm thì nghe giọng mẫu. Giọng đọc tiếng Anh dùng speechSynthesis của thiết bị, khả năng hoạt động ngoại tuyến tùy gói giọng đã cài.
 
 ## Phát triển
 Node 24 để chạy `npm test` và `npm run validate`. Không cần cài dependencies. `npm start` phục vụ trang tĩnh cổng 4173 bằng Python 3. Mở qua HTTP, không mở index.html bằng file:// vì dữ liệu dùng fetch.
