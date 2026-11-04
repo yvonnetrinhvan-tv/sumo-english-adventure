@@ -6,3 +6,139 @@
 .word-picture{font-size:96px;line-height:1.2;text-align:center;width:150px;margin:-6px auto 4px;padding:8px 0;border-radius:32px;background:linear-gradient(145deg,#2c4a6e,#223a5c);border:1px solid #6683a0;box-shadow:0 6px 0 #10233b}
 @media(max-width:650px){.word-picture{font-size:80px;width:128px}}
 .tip{margin-top:16px;padding:14px 16px;border-radius:16px;background:#26374f;border-left:4px solid #ffdf95}.tip p{margin:6px 0 0}
+/* Phong cách kiếm hiệp: nền mực, vàng đồng, đỏ son, ngọc bích. Phông hệ thống, không tải ngoài. */
+:root{--ink:#0c0a10;--panel:#181219;--panel2:#221a22;--gold:#e8b95a;--gold2:#9a6f1d;--red:#c8312f;--red2:#7a1420;--jade:#45c3a6;--paper:#f6e8c8;--serif:"Noto Serif","Source Han Serif SC","Songti SC",Georgia,"Times New Roman",serif}
+body{background:radial-gradient(ellipse at 80% -5%,#5b1620 0,transparent 48%),radial-gradient(ellipse at 0 30%,#1d2a2e 0,transparent 42%),var(--ink);color:var(--paper)}
+body::before{content:'';position:fixed;left:0;right:0;bottom:0;height:200px;z-index:-1;pointer-events:none;opacity:.9;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 220' preserveAspectRatio='none'%3E%3Cpath d='M0 220V120l80-60 60 40 110-90 110 110 80-50 120 90 100-100 140 120 90-60 120 80 190-70v140z' fill='%23181018'/%3E%3Cpath d='M0 220V170l120-60 100 50 130-80 150 90 110-50 160 70 140-60 290 70v20z' fill='%23100b12'/%3E%3C/svg%3E") bottom/100% 100% no-repeat}
+h1,h2,h3,.word,.brand,.eyebrow,.node .number{font-family:var(--serif)}
+header{background:linear-gradient(#1b1117,#100b11);border-bottom:2px solid var(--gold2);box-shadow:0 1px 0 #000,0 4px 0 #3a1a1c}
+.brand{color:var(--gold);letter-spacing:3px;text-shadow:0 2px 0 var(--red2),0 0 22px #e8b95a55}.brand small{color:var(--paper);opacity:.75}
+#balances{background:#150f15;border:1px solid var(--gold2);color:var(--gold);box-shadow:inset 0 0 10px #000}
+nav{background:#0f0a10;border-bottom:1px solid #3a2a1b}nav a{border:1px solid transparent;color:#d9c9a5}
+nav a:hover{background:#26181c}nav a[aria-current]{background:linear-gradient(#8e1f2a,#5c1019);border-color:var(--gold);color:var(--gold)}
+h1{letter-spacing:0;color:var(--paper)}main>h2{color:var(--gold);border-left:4px solid var(--red);padding-left:12px}
+p{color:#d3c3a4}.muted{color:#b3a283}
+button,.button{background:linear-gradient(#f4cf7a,#d29a37);color:#2a1507;box-shadow:0 4px 0 var(--red2),0 8px 16px #0009;border:1px solid #fff1b8}
+button:active,.button:active{box-shadow:0 1px 0 var(--red2)}
+button.secondary,.button.secondary,.secondary{background:linear-gradient(#2c2028,#1c141b);color:var(--gold);border:1px solid var(--gold2);box-shadow:0 4px 0 #090609}
+button:disabled{filter:grayscale(.7);opacity:.45;box-shadow:none}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--jade)}
+.card{background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid #6d5427;border-radius:14px;box-shadow:inset 0 0 0 3px var(--panel),inset 0 0 0 4px #4a3920,0 10px 26px #0008}
+.hero{background:radial-gradient(circle at 82% 30%,#e8b95a33 0,transparent 24%),linear-gradient(125deg,#4a0f1a,#1a1019 62%,#101a1d);border:1px solid var(--gold2);border-radius:18px;box-shadow:inset 0 0 0 3px #12090e,inset 0 0 0 4px #5b4421,0 18px 50px #000a}
+.hero h1{color:var(--paper);text-shadow:0 3px 0 var(--red2)}.hero .eyebrow{background:#2a0d13;border-color:var(--gold2);color:var(--gold);border-radius:6px}
+.eyebrow{color:var(--gold)}.badge{background:#241a1d;border:1px solid var(--gold2);color:var(--gold);border-radius:8px}
+.statrow>div{background:#1a1216aa;border:1px solid #6d5427;border-radius:10px}.metric{color:var(--gold);font-family:var(--serif)}
+.notice{background:#241a1d;border-left:4px solid var(--red);color:#e6d6b5}
+.node{background:radial-gradient(circle at 50% 0,#8e1f2a33,transparent 65%),linear-gradient(160deg,#241a22,#150f16);border:1px solid #6d5427;border-radius:12px;box-shadow:0 6px 0 #070508,0 10px 18px #0007}
+.node::before{color:var(--red)!important}
+.node .number{background:radial-gradient(circle at 35% 30%,#ffe9a5,#d29a37 70%);color:#3a1a08;border-radius:50%;box-shadow:0 0 0 3px var(--red2),0 0 0 4px var(--gold)}
+.node.locked{background:linear-gradient(160deg,#18121a,#100b12);border-color:#2f2530;box-shadow:0 4px 0 #070508;color:#8b7e72}
+.node.locked .number{background:#2b2128;color:#7d6f66;box-shadow:0 0 0 3px #1a1319,0 0 0 4px #3a2e36}
+.node:not(.locked) p{color:var(--paper)}
+.progress{background:#120c12;border:1px solid #4a3920;height:12px}.progress span{background:linear-gradient(90deg,var(--red),var(--gold))}
+.options button{background:linear-gradient(#2a2029,#1b141b);color:var(--paper);border:1px solid #6d5427;box-shadow:0 3px 0 #070508}
+.options button:hover{border-color:var(--jade)}
+.feedback{background:linear-gradient(135deg,#143a34,#16252a);border:1px solid var(--jade)}
+.word{color:var(--gold);text-shadow:0 2px 0 var(--red2)}
+.word-picture{background:radial-gradient(circle at 50% 35%,#4a2230,#1c1219);border:2px solid var(--gold);border-radius:50%;box-shadow:0 0 0 4px var(--red2),0 0 30px #e8b95a44;width:160px;height:160px;display:grid;place-items:center;padding:0;line-height:1;margin:-6px auto 8px}
+@media(max-width:650px){.word-picture{width:132px;height:132px}}
+.tip{background:#241a1d;border-left:4px solid var(--gold)}
+input,textarea,select{background:#120c12;border:1px solid #6d5427;color:var(--paper)}
+#toast{background:var(--paper);color:#2a1507;border:2px solid var(--red)}
+footer{color:#a8977a;border-top:1px solid #3a2a1b;background:#0b080c99}
+.installbar{background:#1c1318;border-color:#6d5427}
+/* Linh thú */
+.pet{position:relative;width:var(--sz);height:var(--sz);margin:0 auto;display:grid;place-items:center}
+.pet .aura{position:absolute;inset:-8%;border-radius:50%;background:radial-gradient(circle,var(--c1) 0,transparent 68%);opacity:.5;animation:aura 3.2s ease-in-out infinite}
+.pet.egg .aura{opacity:.35}
+.pet:not(.egg){border-radius:50%;background:radial-gradient(circle at 50% 35%,var(--c1) -30%,var(--c2) 85%);border:3px solid var(--gold);box-shadow:0 0 0 3px var(--red2),0 8px 22px #000a}
+.pet-face{position:relative;z-index:1;line-height:1;font-size:calc(var(--sz)*.5);filter:drop-shadow(0 4px 4px #0008)}
+.pet.teen .pet-face{font-size:calc(var(--sz)*.58)}
+.pet.adult .pet-face{font-size:calc(var(--sz)*.66)}
+.pet.adult{box-shadow:0 0 0 3px var(--red2),0 0 0 7px var(--gold),0 0 34px #e8b95a88}
+.pet svg.egg{position:relative;z-index:1;width:calc(var(--sz)*.72);height:auto;filter:drop-shadow(0 6px 6px #000a)}
+.pet svg.wobble{animation:wobble 1.6s ease-in-out infinite;transform-origin:50% 100%}
+.deco{position:absolute;right:-4px;bottom:-4px;z-index:2;font-size:calc(var(--sz)*.26);line-height:1;background:var(--panel);border:2px solid var(--gold);border-radius:50%;padding:4px}
+@keyframes aura{50%{transform:scale(1.12);opacity:.75}}
+@keyframes wobble{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+.hero-pet{display:grid;justify-items:center;gap:10px;text-align:center;color:var(--gold);font-family:var(--serif);font-weight:700;padding:8px}
+.pets-hero{grid-template-columns:1.5fr 1fr}
+.pet-card,.egg-card,.skin-card{text-align:center}.pet-card h3,.egg-card h3,.skin-card h3{margin:12px 0 2px;color:var(--gold)}.pet-card small{color:#b3a283;font-weight:400}
+.pet-card.is-active{border-color:var(--gold);box-shadow:inset 0 0 0 3px var(--panel),inset 0 0 0 4px var(--gold),0 0 26px #e8b95a44}
+.pet-card .progress{margin:8px 0 12px}
+.foods{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:12px}
+button.mini{font-size:12px;line-height:1.3;padding:8px 4px;min-height:58px;border-radius:10px}
+.pet-card label{text-align:left;font-size:13px;color:#b3a283}
+.skin-swatch{width:68px;height:68px;margin:0 auto;border-radius:50%;display:grid;place-items:center;font-size:32px;background:radial-gradient(circle at 35% 30%,var(--c1),var(--c2));border:3px solid var(--gold);box-shadow:0 0 0 3px var(--red2)}
+@media(max-width:650px){.pets-hero{grid-template-columns:1fr}.hero-pet{margin-top:14px}.foods{grid-template-columns:1fr 1fr 1fr}}
+/* Chế độ màn học: mỗi từ hoặc câu vừa một màn hình, nút xác nhận luôn nằm ở đáy. */
+body.playing{overflow:hidden}
+body.playing header,body.playing nav,body.playing footer,body.playing .installbar{display:none}
+body.playing main{padding:0;max-width:none;min-height:0}
+.screen{height:100vh;height:100dvh;max-width:560px;margin:0 auto;display:flex;flex-direction:column;padding:max(8px,env(safe-area-inset-top)) 12px max(10px,env(safe-area-inset-bottom))}
+.topbar{display:flex;align-items:center;gap:10px;flex:none;padding:2px 0 10px}
+.back{width:44px;height:44px;min-height:44px;padding:0;border-radius:50%;font-size:20px;flex:none}
+.topinfo{flex:1;min-width:0}
+.topinfo h1{font-size:14px;margin:0 0 8px;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--gold)}
+.topinfo .progress{position:relative;overflow:visible;margin:0;height:12px}
+.topinfo .progress span{border-radius:10px}
+.runner{position:absolute;top:-11px;transform:translateX(-50%);font-size:22px;font-style:normal;line-height:1;transition:left .4s;filter:drop-shadow(0 2px 2px #000a)}
+.stage{flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;-webkit-overflow-scrolling:touch}
+.stage>.card{flex:1;margin:0}
+.game-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(4px,1.2dvh,10px);text-align:center;padding:clamp(10px,2dvh,18px) 14px}
+.game-card h2,.game-card h3,.game-card p{margin:0}
+.dock{flex:none;padding-top:10px;display:grid;gap:8px}
+.dock button{width:100%;min-height:54px;font-size:18px}
+.dock form{display:flex;gap:8px}.dock form input{flex:1;min-width:0;font-size:18px;margin:0}.dock form button{width:auto;padding:0 22px}
+.learn-card,.ask-card{background:linear-gradient(165deg,hsl(var(--hue,330) 42% 22%),#150f16 88%)}
+.word-picture{--pic:clamp(84px,17dvh,150px);width:var(--pic);height:var(--pic);font-size:calc(var(--pic)*.6);margin:0;flex:none;position:relative}
+.word-picture::after{content:'✨';position:absolute;right:-4px;top:-4px;font-size:calc(var(--pic)*.2);animation:aura 2.6s ease-in-out infinite}
+.word{font-size:clamp(30px,6.4dvh,50px);line-height:1.1}
+.mean{font-size:clamp(18px,3.2dvh,24px);color:var(--paper);font-family:var(--serif)}
+.meta{font-size:13px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%}
+.duo button{min-height:46px;font-size:15px;padding:8px}
+.game-card .tip{width:100%;padding:8px 12px;font-size:14px;line-height:1.4;text-align:left;margin:0}
+.game-card blockquote{width:100%;margin:0;padding:8px 12px;border-left:4px solid var(--red);background:#ffffff0d;border-radius:8px;text-align:left;font-size:15px;line-height:1.4}
+.ask-card h2{font-size:clamp(18px,3.4dvh,24px);line-height:1.3}
+.ask-card details{margin:0;width:100%}
+.options{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.options button{min-height:clamp(60px,10dvh,84px);font-size:clamp(15px,2.6dvh,19px);text-align:center;display:grid;place-items:center;line-height:1.25;overflow-wrap:anywhere}
+.options button.ok{background:linear-gradient(#6fe8ae,#2fa876);color:#06281a;border-color:#d4ffe8}
+.options button.bad{background:linear-gradient(#ff9484,#c8402f);color:#2a0905;border-color:#ffd3cb}
+.illustration.mini{font-size:inherit}.illustration.mini svg{width:auto;height:clamp(56px,10dvh,96px)}
+.big-emoji{font-size:clamp(64px,13dvh,110px);line-height:1;animation:aura 2.4s ease-in-out infinite}
+.screen #feedback{position:fixed;left:0;right:0;bottom:0;z-index:30}
+.feedback{max-width:560px;margin:0 auto;border-radius:22px 22px 0 0;padding:14px 16px max(14px,env(safe-area-inset-bottom));max-height:55dvh;overflow:auto;animation:rise .25s ease-out;box-shadow:0 -12px 30px #000b;text-align:left}
+.feedback.ok{background:linear-gradient(#17533f,#12302b);border:1px solid var(--jade)}
+.feedback.bad{background:linear-gradient(#55261b,#2e1713);border:1px solid #e07a5f}
+.feedback strong{font-size:19px;font-family:var(--serif)}
+.feedback p{margin:6px 0 0;line-height:1.4}
+.feedback button{width:100%;margin-top:10px;min-height:52px;font-size:18px}
+@keyframes rise{from{transform:translateY(100%)}}
+.node:not(.locked){background:radial-gradient(circle at 50% 0,hsl(var(--hue,330) 60% 40%/.4),transparent 65%),linear-gradient(160deg,#241a22,#150f16)}
+@media(max-height:640px){.word-picture{--pic:clamp(64px,14dvh,110px)}.dock button{min-height:48px}.game-card .tip,.game-card blockquote{font-size:13px;padding:6px 10px}.duo button{min-height:40px}}
+@media(min-width:700px){.screen{padding-top:20px}}
+.word.sm{font-size:clamp(24px,4.6dvh,36px)}.word.xs{font-size:clamp(20px,3.6dvh,28px)}.mean.sm{font-size:clamp(15px,2.6dvh,19px)}
+.options button.ok:disabled,.options button.bad:disabled{opacity:1}
+.answered .illustration.mini{display:none}.answered .word-picture{--pic:clamp(56px,10dvh,84px)}
+.feedback p{font-size:14px}
+.learn-card,.ask-card{background:radial-gradient(circle at 50% 0,hsl(var(--hue,345) 70% 32%/.55),transparent 60%),linear-gradient(165deg,hsl(var(--hue,345) 50% 17%),#130e15 90%)}
+.illustration.mini svg{height:clamp(70px,14dvh,130px)}
+.options button{min-height:clamp(66px,12dvh,104px)}
+.ask-card .word-picture{--pic:clamp(100px,19dvh,170px)}
+/* Cảnh Sumo điều khiển linh thú */
+.hero-pet{align-self:center}
+.rider{display:block;width:100%;max-width:440px;height:auto;margin:0 auto;filter:drop-shadow(0 12px 22px #000b)}
+.pets-hero{grid-template-columns:1.1fr 1fr}
+.r-bob{animation:bob 3.4s ease-in-out infinite}
+.r-aura{animation:aura 3s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.r-cape{animation:flutter 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:0 0}
+.r-float{animation:bob 3.2s ease-in-out infinite}
+.r-swing{animation:swing 3.4s ease-in-out infinite}
+.r-spin{animation:spin 16s linear infinite}
+@keyframes bob{50%{transform:translateY(-6px)}}
+@keyframes flutter{50%{transform:skewY(5deg) scaleX(.94)}}
+@keyframes swing{50%{transform:rotate(7deg)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:650px){.pets-hero{grid-template-columns:1fr}.hero-pet{margin-top:8px}}

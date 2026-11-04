@@ -1,0 +1,4 @@
+import{test}from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
+const sw=fs.readFileSync(new URL('../sw.js',import.meta.url),'utf8'),flow=fs.readFileSync(new URL('../.github/workflows/pages.yml',import.meta.url),'utf8');
+test('workflow can rename the cache per deploy: sw.js keeps the exact placeholder name',()=>{const m=flow.match(/s\/([^/]+)\/sumo-static-/);assert.ok(m,'workflow no longer rewrites the cache name');assert.ok(sw.includes(`CACHE='${m[1]}'`),`sw.js must use CACHE='${m[1]}' so each deploy gets a fresh cache`);});
+test('offline file list covers every module and the data file',()=>{for(const f of fs.readdirSync(new URL('../src/',import.meta.url)))assert.ok(sw.includes(`'./src/${f}'`),`sw.js FILES misses src/${f}`);assert.ok(sw.includes("'./data/curriculum.json'"));});
