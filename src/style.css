@@ -127,3 +127,18 @@ body.playing main{padding:0;max-width:none;min-height:0}
 .illustration.mini svg{height:clamp(70px,14dvh,130px)}
 .options button{min-height:clamp(66px,12dvh,104px)}
 .ask-card .word-picture{--pic:clamp(100px,19dvh,170px)}
+/* Cảnh Sumo điều khiển linh thú */
+.hero-pet{align-self:center}
+.rider{display:block;width:100%;max-width:440px;height:auto;margin:0 auto;filter:drop-shadow(0 12px 22px #000b)}
+.pets-hero{grid-template-columns:1.1fr 1fr}
+.r-bob{animation:bob 3.4s ease-in-out infinite}
+.r-aura{animation:aura 3s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.r-cape{animation:flutter 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:0 0}
+.r-float{animation:bob 3.2s ease-in-out infinite}
+.r-swing{animation:swing 3.4s ease-in-out infinite}
+.r-spin{animation:spin 16s linear infinite}
+@keyframes bob{50%{transform:translateY(-6px)}}
+@keyframes flutter{50%{transform:skewY(5deg) scaleX(.94)}}
+@keyframes swing{50%{transform:rotate(7deg)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:650px){.pets-hero{grid-template-columns:1fr}.hero-pet{margin-top:8px}}

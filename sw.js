@@ -1,5 +1,5 @@
-const CACHE='sumo-static-v7';
-const FILES=['./','./index.html','./manifest.webmanifest','./src/app.js','./src/engine.js','./src/pets.js','./src/vocab.js','./src/petart.js','./src/illustration.js','./src/transfer.js','./src/style.css','./data/curriculum.json','./icons/sumo-192.png','./icons/sumo-512.png','./icons/apple-touch-icon.png'];
+const CACHE='sumo-static-v8';
+const FILES=['./','./index.html','./manifest.webmanifest','./src/app.js','./src/engine.js','./src/pets.js','./src/vocab.js','./src/petart.js','./src/rider.js','./src/illustration.js','./src/transfer.js','./src/style.css','./data/curriculum.json','./icons/sumo-192.png','./icons/sumo-512.png','./icons/apple-touch-icon.png'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES)));});
 // A new version activates after all old app windows close, avoiding mixed module versions.
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('sumo-static-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
