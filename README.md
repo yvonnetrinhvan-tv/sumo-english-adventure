@@ -5,6 +5,9 @@ Trò chơi tĩnh miễn phí bằng HTML/CSS/JavaScript, không cần gói npm, 
 ## Nội dung thực tế
 5 cấp đã biên soạn, 100 mục riêng biệt. Bản đồ hiển thị 100 cấp, 95 cấp chưa có nội dung được khóa rõ ràng. Không tuyên bố đã hoàn thành 2.000 mục. Câu hỏi dùng nghĩa, nghe (có chữ thay thế), chọn từ, gõ chính tả và hiểu câu mẫu. Thẻ học hiển thị emoji minh họa riêng cho từng từ (hệ thống tự vẽ, không tải ảnh ngoài); có dạng câu hỏi nhìn hình chọn từ tiếng Anh. IPA kiểu Mỹ đối chiếu từ điển CMU; gợi âm tiếng Việt và mẹo nhớ do biên soạn, chỉ gần đúng. Từ nào cần xác nhận thêm thì nghe giọng mẫu. Giọng đọc tiếng Anh dùng speechSynthesis của thiết bị, khả năng hoạt động ngoại tuyến tùy gói giọng đã cài.
 
+## Màn học một trang
+Thẻ học và câu hỏi dùng chế độ toàn màn hình (`body.playing`): ẩn thanh điều hướng, thanh trên cố định có nút quay lại và thanh tiến độ có linh thú chạy theo, nội dung vừa một màn hình, nút xác nhận luôn nằm ở đáy (không cần cuộn). Phản hồi đúng/sai hiện thành bảng trượt từ đáy, đáp án đúng sáng xanh, đáp án sai sáng đỏ, trả lời đúng có hiệu ứng pháo hoa (tắt khi thiết bị bật giảm chuyển động). Kích thước hình và chữ co theo chiều cao màn hình (đã đo từ 320×568 đến 390×844); câu rất dài tự thu nhỏ chữ. Màu nền đổi theo từng cấp.
+
 ## Linh thú
 Phần thưởng trong game là nuôi linh thú (Linh Thú Viên, mục `#pets`). Mỗi cấp hoàn thành lần đầu cho 100 xu. Xu mua trứng (100–400 xu, 9 loài), đồ ăn và y phục. Trứng chỉ nở nhờ học: mỗi câu đúng +1 điểm ấp cho bé đang chăm, tối đa 30 điểm mỗi ngày; hoàn thành cấp lần đầu +20 điểm. Nở ở 60 điểm, thiếu niên ở 160, trưởng thành ở 320. Đồ ăn cho thêm điểm, trứng chưa nở thì chưa ăn được. Y phục mua một lần, mặc riêng cho từng bé. Sao vàng và quà thật của mẹ giữ nguyên, tách khỏi xu. Hình linh thú là emoji hệ thống và SVG tự vẽ, không tải ảnh ngoài. Cửa hàng trang phục Sumo cũ đã ngừng bán; bản sao lưu cũ vẫn nhập được và tự có kho linh thú rỗng.
 
