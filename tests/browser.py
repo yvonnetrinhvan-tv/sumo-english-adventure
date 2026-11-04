@@ -31,10 +31,10 @@ with sync_playwright() as p:
  s=page.evaluate("JSON.parse(localStorage.getItem('sumo-adventure-v1'))")
  assert s['coins']==100 and s['completed']==[1] and len(s['mastery'])==20
  page.reload();assert page.locator('#balances').inner_text().startswith('🪙 100')
- page.get_by_role('link',name='🛍️ Cửa hàng').click();page.locator('[data-buy="hat"]').click();assert page.locator('[data-buy="hat"]').inner_text()=='Tháo vật phẩm'
+ page.get_by_role('link',name='🐲 Linh thú').click();page.locator('[data-egg="wolf"]').click();assert page.locator('#balances').inner_text().startswith('🪙 0');assert page.get_by_text('Sói Bạc').count()>=1
  page.get_by_role('link',name='🛡️ Góc của mẹ').click();page.locator('#pin').fill('2468');page.locator('#pin2').fill('2468');page.get_by_role('button',name='Tạo PIN và mở').click();page.get_by_role('button',name='Tải bản sao lưu đầy đủ').wait_for()
  with page.expect_download() as dl:page.get_by_role('button',name='Tải bản sao lưu đầy đủ').click()
- dl.value.save_as('/tmp/sumo-backup.json');assert json.load(open('/tmp/sumo-backup.json'))['coins']==20
+ dl.value.save_as('/tmp/sumo-backup.json');assert json.load(open('/tmp/sumo-backup.json'))['coins']==0
  page.get_by_role('button',name='Khóa góc của mẹ').click();page.locator('#pin').fill('1111');page.get_by_role('button',name='Mở góc của mẹ').click();assert page.locator('#pinform').count()==1
  page.locator('#pin').fill('2468');page.get_by_role('button',name='Mở góc của mẹ').click();page.get_by_role('button',name='Tải bản sao lưu đầy đủ').wait_for()
  page.evaluate("""async()=>{let E=await import('./src/engine.js');let s=JSON.parse(localStorage.getItem(E.KEY));for(let id=2;id<=5;id++)E.complete(s,id,10);localStorage.setItem(E.KEY,JSON.stringify(s));}""")

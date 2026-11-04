@@ -5,6 +5,9 @@ Trò chơi tĩnh miễn phí bằng HTML/CSS/JavaScript, không cần gói npm, 
 ## Nội dung thực tế
 5 cấp đã biên soạn, 100 mục riêng biệt. Bản đồ hiển thị 100 cấp, 95 cấp chưa có nội dung được khóa rõ ràng. Không tuyên bố đã hoàn thành 2.000 mục. Câu hỏi dùng nghĩa, nghe (có chữ thay thế), chọn từ, gõ chính tả và hiểu câu mẫu. Thẻ học hiển thị emoji minh họa riêng cho từng từ (hệ thống tự vẽ, không tải ảnh ngoài); có dạng câu hỏi nhìn hình chọn từ tiếng Anh. IPA kiểu Mỹ đối chiếu từ điển CMU; gợi âm tiếng Việt và mẹo nhớ do biên soạn, chỉ gần đúng. Từ nào cần xác nhận thêm thì nghe giọng mẫu. Giọng đọc tiếng Anh dùng speechSynthesis của thiết bị, khả năng hoạt động ngoại tuyến tùy gói giọng đã cài.
 
+## Linh thú
+Phần thưởng trong game là nuôi linh thú (Linh Thú Viên, mục `#pets`). Mỗi cấp hoàn thành lần đầu cho 100 xu. Xu mua trứng (100–400 xu, 9 loài), đồ ăn và y phục. Trứng chỉ nở nhờ học: mỗi câu đúng +1 điểm ấp cho bé đang chăm, tối đa 30 điểm mỗi ngày; hoàn thành cấp lần đầu +20 điểm. Nở ở 60 điểm, thiếu niên ở 160, trưởng thành ở 320. Đồ ăn cho thêm điểm, trứng chưa nở thì chưa ăn được. Y phục mua một lần, mặc riêng cho từng bé. Sao vàng và quà thật của mẹ giữ nguyên, tách khỏi xu. Hình linh thú là emoji hệ thống và SVG tự vẽ, không tải ảnh ngoài. Cửa hàng trang phục Sumo cũ đã ngừng bán; bản sao lưu cũ vẫn nhập được và tự có kho linh thú rỗng.
+
 ## Phát triển
 Node 24 để chạy `npm test` và `npm run validate`. Không cần cài dependencies. `npm start` phục vụ trang tĩnh cổng 4173 bằng Python 3. Mở qua HTTP, không mở index.html bằng file:// vì dữ liệu dùng fetch.
 
@@ -14,7 +17,7 @@ Workflow `.github/workflows/pages.yml` kiểm thử rồi triển khai khi đẩ
 ## Dữ liệu và bảo mật
 Không theo dõi, quảng cáo, SDK ngoài hay thu thập thông tin trẻ. PIN băm SHA-256 kèm salt là chốt cửa đơn giản trên máy, không xác thực an toàn. Tiến độ có thể bị sửa trong trình duyệt; không có giá trị tiền thật. Giá món quà 5 sao được mẹ xác nhận, luôn dưới 500.000 đồng. Không chuyển đổi sao và xu.
 
-Mẹ chỉnh bài, ví dụ, chủ đề, mốc quà, tên/giá đồ trong Góc của mẹ. Nhập JSON theo bản xuất hoặc CSV có cột `level` cùng các trường mục học; cấp liên tiếp đủ 20 mục, không trùng ID/từ. Nhập thay cả bộ; giữ ID ổn định khi chỉnh. Validator kiểm tra cấu trúc, tính duy nhất và cụm từ xuất hiện trong ví dụ, không thay thế kiểm duyệt ngôn ngữ. Bản sao lưu chứa cả nội dung tùy chỉnh, PIN băm và tiến độ.
+Mẹ chỉnh bài, ví dụ, chủ đề, mốc quà trong Góc của mẹ. Nhập JSON theo bản xuất hoặc CSV có cột `level` cùng các trường mục học; cấp liên tiếp đủ 20 mục, không trùng ID/từ. Nhập thay cả bộ; giữ ID ổn định khi chỉnh. Validator kiểm tra cấu trúc, tính duy nhất và cụm từ xuất hiện trong ví dụ, không thay thế kiểm duyệt ngôn ngữ. Bản sao lưu chứa cả nội dung tùy chỉnh, PIN băm và tiến độ.
 
 ## Kiểm tra giao diện đã thực hiện
 `python3 tests/browser.py` dùng Playwright Python và Chromium có sẵn trong môi trường QA (không phải dependency của trò chơi), với máy chủ đang chạy cổng 4173. Kịch bản đi hết 20 lượt luyện và 10 câu cuối cấp trên màn hình 390px, kiểm tra tải lại, trang bị đồ, PIN, tải sao lưu, đổi/duyệt/trao quà và ôn cấp sau. Kiểm tra Node độc lập không cần Playwright. Không coi kiểm tra giao diện này là kiểm duyệt ngôn ngữ hay xác minh triển khai công khai.

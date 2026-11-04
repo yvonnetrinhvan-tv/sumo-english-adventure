@@ -6,3 +6,68 @@
 .word-picture{font-size:96px;line-height:1.2;text-align:center;width:150px;margin:-6px auto 4px;padding:8px 0;border-radius:32px;background:linear-gradient(145deg,#2c4a6e,#223a5c);border:1px solid #6683a0;box-shadow:0 6px 0 #10233b}
 @media(max-width:650px){.word-picture{font-size:80px;width:128px}}
 .tip{margin-top:16px;padding:14px 16px;border-radius:16px;background:#26374f;border-left:4px solid #ffdf95}.tip p{margin:6px 0 0}
+/* Phong cách kiếm hiệp: nền mực, vàng đồng, đỏ son, ngọc bích. Phông hệ thống, không tải ngoài. */
+:root{--ink:#0c0a10;--panel:#181219;--panel2:#221a22;--gold:#e8b95a;--gold2:#9a6f1d;--red:#c8312f;--red2:#7a1420;--jade:#45c3a6;--paper:#f6e8c8;--serif:"Noto Serif","Source Han Serif SC","Songti SC",Georgia,"Times New Roman",serif}
+body{background:radial-gradient(ellipse at 80% -5%,#5b1620 0,transparent 48%),radial-gradient(ellipse at 0 30%,#1d2a2e 0,transparent 42%),var(--ink);color:var(--paper)}
+body::before{content:'';position:fixed;left:0;right:0;bottom:0;height:200px;z-index:-1;pointer-events:none;opacity:.9;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 220' preserveAspectRatio='none'%3E%3Cpath d='M0 220V120l80-60 60 40 110-90 110 110 80-50 120 90 100-100 140 120 90-60 120 80 190-70v140z' fill='%23181018'/%3E%3Cpath d='M0 220V170l120-60 100 50 130-80 150 90 110-50 160 70 140-60 290 70v20z' fill='%23100b12'/%3E%3C/svg%3E") bottom/100% 100% no-repeat}
+h1,h2,h3,.word,.brand,.eyebrow,.node .number{font-family:var(--serif)}
+header{background:linear-gradient(#1b1117,#100b11);border-bottom:2px solid var(--gold2);box-shadow:0 1px 0 #000,0 4px 0 #3a1a1c}
+.brand{color:var(--gold);letter-spacing:3px;text-shadow:0 2px 0 var(--red2),0 0 22px #e8b95a55}.brand small{color:var(--paper);opacity:.75}
+#balances{background:#150f15;border:1px solid var(--gold2);color:var(--gold);box-shadow:inset 0 0 10px #000}
+nav{background:#0f0a10;border-bottom:1px solid #3a2a1b}nav a{border:1px solid transparent;color:#d9c9a5}
+nav a:hover{background:#26181c}nav a[aria-current]{background:linear-gradient(#8e1f2a,#5c1019);border-color:var(--gold);color:var(--gold)}
+h1{letter-spacing:0;color:var(--paper)}main>h2{color:var(--gold);border-left:4px solid var(--red);padding-left:12px}
+p{color:#d3c3a4}.muted{color:#b3a283}
+button,.button{background:linear-gradient(#f4cf7a,#d29a37);color:#2a1507;box-shadow:0 4px 0 var(--red2),0 8px 16px #0009;border:1px solid #fff1b8}
+button:active,.button:active{box-shadow:0 1px 0 var(--red2)}
+button.secondary,.button.secondary,.secondary{background:linear-gradient(#2c2028,#1c141b);color:var(--gold);border:1px solid var(--gold2);box-shadow:0 4px 0 #090609}
+button:disabled{filter:grayscale(.7);opacity:.45;box-shadow:none}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--jade)}
+.card{background:linear-gradient(160deg,var(--panel2),var(--panel));border:1px solid #6d5427;border-radius:14px;box-shadow:inset 0 0 0 3px var(--panel),inset 0 0 0 4px #4a3920,0 10px 26px #0008}
+.hero{background:radial-gradient(circle at 82% 30%,#e8b95a33 0,transparent 24%),linear-gradient(125deg,#4a0f1a,#1a1019 62%,#101a1d);border:1px solid var(--gold2);border-radius:18px;box-shadow:inset 0 0 0 3px #12090e,inset 0 0 0 4px #5b4421,0 18px 50px #000a}
+.hero h1{color:var(--paper);text-shadow:0 3px 0 var(--red2)}.hero .eyebrow{background:#2a0d13;border-color:var(--gold2);color:var(--gold);border-radius:6px}
+.eyebrow{color:var(--gold)}.badge{background:#241a1d;border:1px solid var(--gold2);color:var(--gold);border-radius:8px}
+.statrow>div{background:#1a1216aa;border:1px solid #6d5427;border-radius:10px}.metric{color:var(--gold);font-family:var(--serif)}
+.notice{background:#241a1d;border-left:4px solid var(--red);color:#e6d6b5}
+.node{background:radial-gradient(circle at 50% 0,#8e1f2a33,transparent 65%),linear-gradient(160deg,#241a22,#150f16);border:1px solid #6d5427;border-radius:12px;box-shadow:0 6px 0 #070508,0 10px 18px #0007}
+.node::before{color:var(--red)!important}
+.node .number{background:radial-gradient(circle at 35% 30%,#ffe9a5,#d29a37 70%);color:#3a1a08;border-radius:50%;box-shadow:0 0 0 3px var(--red2),0 0 0 4px var(--gold)}
+.node.locked{background:linear-gradient(160deg,#18121a,#100b12);border-color:#2f2530;box-shadow:0 4px 0 #070508;color:#8b7e72}
+.node.locked .number{background:#2b2128;color:#7d6f66;box-shadow:0 0 0 3px #1a1319,0 0 0 4px #3a2e36}
+.node:not(.locked) p{color:var(--paper)}
+.progress{background:#120c12;border:1px solid #4a3920;height:12px}.progress span{background:linear-gradient(90deg,var(--red),var(--gold))}
+.options button{background:linear-gradient(#2a2029,#1b141b);color:var(--paper);border:1px solid #6d5427;box-shadow:0 3px 0 #070508}
+.options button:hover{border-color:var(--jade)}
+.feedback{background:linear-gradient(135deg,#143a34,#16252a);border:1px solid var(--jade)}
+.word{color:var(--gold);text-shadow:0 2px 0 var(--red2)}
+.word-picture{background:radial-gradient(circle at 50% 35%,#4a2230,#1c1219);border:2px solid var(--gold);border-radius:50%;box-shadow:0 0 0 4px var(--red2),0 0 30px #e8b95a44;width:160px;height:160px;display:grid;place-items:center;padding:0;line-height:1;margin:-6px auto 8px}
+@media(max-width:650px){.word-picture{width:132px;height:132px}}
+.tip{background:#241a1d;border-left:4px solid var(--gold)}
+input,textarea,select{background:#120c12;border:1px solid #6d5427;color:var(--paper)}
+#toast{background:var(--paper);color:#2a1507;border:2px solid var(--red)}
+footer{color:#a8977a;border-top:1px solid #3a2a1b;background:#0b080c99}
+.installbar{background:#1c1318;border-color:#6d5427}
+/* Linh thú */
+.pet{position:relative;width:var(--sz);height:var(--sz);margin:0 auto;display:grid;place-items:center}
+.pet .aura{position:absolute;inset:-8%;border-radius:50%;background:radial-gradient(circle,var(--c1) 0,transparent 68%);opacity:.5;animation:aura 3.2s ease-in-out infinite}
+.pet.egg .aura{opacity:.35}
+.pet:not(.egg){border-radius:50%;background:radial-gradient(circle at 50% 35%,var(--c1) -30%,var(--c2) 85%);border:3px solid var(--gold);box-shadow:0 0 0 3px var(--red2),0 8px 22px #000a}
+.pet-face{position:relative;z-index:1;line-height:1;font-size:calc(var(--sz)*.5);filter:drop-shadow(0 4px 4px #0008)}
+.pet.teen .pet-face{font-size:calc(var(--sz)*.58)}
+.pet.adult .pet-face{font-size:calc(var(--sz)*.66)}
+.pet.adult{box-shadow:0 0 0 3px var(--red2),0 0 0 7px var(--gold),0 0 34px #e8b95a88}
+.pet svg.egg{position:relative;z-index:1;width:calc(var(--sz)*.72);height:auto;filter:drop-shadow(0 6px 6px #000a)}
+.pet svg.wobble{animation:wobble 1.6s ease-in-out infinite;transform-origin:50% 100%}
+.deco{position:absolute;right:-4px;bottom:-4px;z-index:2;font-size:calc(var(--sz)*.26);line-height:1;background:var(--panel);border:2px solid var(--gold);border-radius:50%;padding:4px}
+@keyframes aura{50%{transform:scale(1.12);opacity:.75}}
+@keyframes wobble{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+.hero-pet{display:grid;justify-items:center;gap:10px;text-align:center;color:var(--gold);font-family:var(--serif);font-weight:700;padding:8px}
+.pets-hero{grid-template-columns:1.5fr 1fr}
+.pet-card,.egg-card,.skin-card{text-align:center}.pet-card h3,.egg-card h3,.skin-card h3{margin:12px 0 2px;color:var(--gold)}.pet-card small{color:#b3a283;font-weight:400}
+.pet-card.is-active{border-color:var(--gold);box-shadow:inset 0 0 0 3px var(--panel),inset 0 0 0 4px var(--gold),0 0 26px #e8b95a44}
+.pet-card .progress{margin:8px 0 12px}
+.foods{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:12px}
+button.mini{font-size:12px;line-height:1.3;padding:8px 4px;min-height:58px;border-radius:10px}
+.pet-card label{text-align:left;font-size:13px;color:#b3a283}
+.skin-swatch{width:68px;height:68px;margin:0 auto;border-radius:50%;display:grid;place-items:center;font-size:32px;background:radial-gradient(circle at 35% 30%,var(--c1),var(--c2));border:3px solid var(--gold);box-shadow:0 0 0 3px var(--red2)}
+@media(max-width:650px){.pets-hero{grid-template-columns:1fr}.hero-pet{margin-top:14px}.foods{grid-template-columns:1fr 1fr 1fr}}
