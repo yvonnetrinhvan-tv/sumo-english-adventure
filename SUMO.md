@@ -14,7 +14,9 @@
 - 20 cấp, 400 mục có nội dung (cấp 6–20 soạn thêm ngày 2026-11-11). Bản đồ 100 cấp, phần chưa có nội dung bị khóa.
 - Mẫu một cấp: 20 mục, `difficulty` = số cấp, ID `Lccc-nn`, đủ trường như cấp 1–5, ví dụ phải chứa từ học.
 - Thêm cấp có sẵn mới thì tăng độ dài `data/curriculum.json` và cập nhật test `engine.test.js`; `migrateBase` tự dịch tiến độ cấp từ mẹ nhập.
-- Linh thú thay cửa hàng avatar. Sumo điều khiển linh thú, trang phục đổi theo giai đoạn.
+- Đã bỏ phần nuôi linh thú (2026-11-11); giao diện không hiển thị xu; dữ liệu cũ vẫn nằm trong bản lưu. Thưởng còn: XP và Sao Vàng.
+- Ôn tập: đục lỗ câu, thiếu chữ cái (l_ve → o), gõ từ; mục `#review`. Mỗi thử thách cấp có 2 câu đục lỗ và 2 câu thiếu chữ cái.
+- Kế hoạch nội dung (đã chốt 1A): cấp 21–50 là từ mới (đủ 1.000 từ cốt lõi ở cấp 50); cấp 51–100 là cấp ôn tập, không thêm từ mới.
 - Mẹ tự nhập từ vựng, app tự dựng cấp mới (20 từ/cấp).
 - Màn học một trang, nút xác nhận ở đáy.
 - PWA, ngoại tuyến, chuyển tiến độ qua liên kết hoặc JSON.
@@ -26,8 +28,8 @@
 |---|---|
 | Giao diện, luồng màn hình | `src/app.js`, `src/style.css`, `index.html` |
 | Luật chơi, câu hỏi, tính điểm | `src/engine.js` |
-| Linh thú, xu, trứng | `src/pets.js`, `src/petart.js` |
-| Cảnh Sumo cưỡi linh thú | `src/rider.js` |
+| Ôn tập, đục lỗ, thiếu chữ cái | `src/engine.js` (clozeQuestion, lettersQuestion, drillQuestions), `src/app.js` (drillHub) |
+| Dữ liệu linh thú cũ (chỉ để tương thích) | `src/pets.js` |
 | Hình minh họa từ | `src/illustration.js` |
 | Mẹ nhập từ vựng | `src/vocab.js` |
 | Chuyển tiến độ thủ công | `src/transfer.js` |
@@ -38,4 +40,4 @@
 
 ## Việc tiếp theo
 - Chờ `projectId` và `apiKey` Firebase của mẹ để điền `src/sync-config.js`, rồi mẹ thử trên iPhone thật.
-- Có thể thêm: nút khôi phục từ bản `-recovery` và `-before-sync` trong Góc của mẹ.
+- Soạn cấp 21–50 (600 từ) theo đợt 5 cấp mỗi PR; sau đó dựng cấp ôn tập 51–100.
