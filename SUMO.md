@@ -11,12 +11,11 @@
 - Mỗi lần sửa: chạy `npm test` và `npm run validate` trước khi commit.
 
 ## Đã chốt (tính đến 2026-11-11)
-- 20 cấp, 400 mục có nội dung (cấp 6–20 soạn thêm ngày 2026-11-11). Bản đồ 100 cấp, phần chưa có nội dung bị khóa.
+- 100 cấp, 1.000 từ cốt lõi (2026-11-11): cấp 1–50 học từ mới, cấp 51–100 ôn tập tổng hợp dựng lúc chạy từ chính 1.000 từ đó (`src/review-levels.js`).
 - Mẫu một cấp: 20 mục, `difficulty` = số cấp, ID `Lccc-nn`, đủ trường như cấp 1–5, ví dụ phải chứa từ học.
-- Thêm cấp có sẵn mới thì tăng độ dài `data/curriculum.json` và cập nhật test `engine.test.js`; `migrateBase` tự dịch tiến độ cấp từ mẹ nhập.
 - Đã bỏ phần nuôi linh thú (2026-11-11); giao diện không hiển thị xu; dữ liệu cũ vẫn nằm trong bản lưu. Thưởng còn: XP và Sao Vàng.
 - Ôn tập: đục lỗ câu, thiếu chữ cái (l_ve → o), gõ từ; mục `#review`. Mỗi thử thách cấp có 2 câu đục lỗ và 2 câu thiếu chữ cái.
-- Kế hoạch nội dung (đã chốt 1A): cấp 21–50 là từ mới (đủ 1.000 từ cốt lõi ở cấp 50); cấp 51–100 là cấp ôn tập, không thêm từ mới.
+- Mục `core` = `data/curriculum.json` (50 cấp). Không đổi/xóa ID mục; thêm cấp học mới thì cập nhật `CORE_LEVELS` và test, `migrateBase` tự dịch tiến độ.
 - Mẹ tự nhập từ vựng, app tự dựng cấp mới (20 từ/cấp).
 - Màn học một trang, nút xác nhận ở đáy.
 - PWA, ngoại tuyến, chuyển tiến độ qua liên kết hoặc JSON.
@@ -34,10 +33,12 @@
 | Mẹ nhập từ vựng | `src/vocab.js` |
 | Chuyển tiến độ thủ công | `src/transfer.js` |
 | Đồng bộ tự động (Firebase) | `src/sync.js`, `src/sync-config.js`, `docs/dong-bo-firebase.md` |
-| Nội dung bài học | `data/curriculum.json` |
+| Nội dung bài học (50 cấp) | `data/curriculum.json` |
+| Cấp ôn tập 51–100 | `src/review-levels.js` |
 | Cache ngoại tuyến | `sw.js`, `manifest.webmanifest` |
 | Kiểm thử | `tests/` |
 
 ## Việc tiếp theo
 - Chờ `projectId` và `apiKey` Firebase của mẹ để điền `src/sync-config.js`, rồi mẹ thử trên iPhone thật.
-- Soạn cấp 21–50 (600 từ) theo đợt 5 cấp mỗi PR; sau đó dựng cấp ôn tập 51–100.
+- Mẹ nghe thử giọng mẫu cấp 6–50 và báo từ cần sửa IPA/gợi âm.
+- Thử trên iPhone thật: màn hình gõ chữ của câu đục lỗ và thiếu chữ cái.
