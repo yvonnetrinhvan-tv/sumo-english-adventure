@@ -1,5 +1,5 @@
 // Mẹ chỉ nhập từ vựng; hệ thống gom 20 từ thành một cấp, xếp từ dễ đến khó và tự tạo nội dung bài.
-export const LEVEL_SIZE=20,MAX_LEVELS=100,THEME='Bộ từ của mẹ';
+export const LEVEL_SIZE=20,MAX_LEVELS=200,THEME='Bộ từ của mẹ';
 const AUTO={cat:'🐱',dog:'🐶',bird:'🐦',rabbit:'🐰',horse:'🐴',cow:'🐮',pig:'🐷',sheep:'🐑',duck:'🦆',frog:'🐸',monkey:'🐵',elephant:'🐘',giraffe:'🦒',bear:'🐻',tiger:'🐯',lion:'🦁',wolf:'🐺',mouse:'🐭',snake:'🐍',turtle:'🐢',butterfly:'🦋',bee:'🐝',spider:'🕷️',ant:'🐜',penguin:'🐧',dolphin:'🐬',whale:'🐳',shark:'🦈',octopus:'🐙',crab:'🦀',snail:'🐌',owl:'🦉',fox:'🦊',panda:'🐼',koala:'🐨',zebra:'🦓',camel:'🐫',deer:'🦌',dinosaur:'🦖',dragon:'🐉',unicorn:'🦄',
 sun:'☀️',moon:'🌙',star:'⭐',cloud:'☁️',rain:'🌧️',snow:'❄️',tree:'🌳',flower:'🌸',rainbow:'🌈',mountain:'⛰️',fire:'🔥',wind:'💨',sea:'🌊',volcano:'🌋',
 pizza:'🍕',cake:'🍰',candy:'🍬','ice cream':'🍦',cookie:'🍪',hamburger:'🍔',sandwich:'🥪',tomato:'🍅',strawberry:'🍓',grape:'🍇',watermelon:'🍉',lemon:'🍋',pineapple:'🍍',corn:'🌽',onion:'🧅',mushroom:'🍄',salad:'🥗',juice:'🧃',tea:'🍵',coffee:'☕',honey:'🍯',popcorn:'🍿',pasta:'🍝',peach:'🍑',pear:'🍐',cherry:'🍒',coconut:'🥥',avocado:'🥑',broccoli:'🥦',pepper:'🌶️',
