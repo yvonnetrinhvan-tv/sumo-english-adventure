@@ -37,3 +37,6 @@ Kiểm thử chuyển và offline: `python3 tests/devices.py` khi server cổng 
 
 ## Quà theo từng giai đoạn
 Góc của mẹ → Chỉnh sửa quà tặng từ mẹ hiển thị trực tiếp biểu mẫu tên, mô tả/lời nhắn, giai đoạn và bật/tắt hiển thị cho mỗi mốc sao. Giữ các mốc 1/2/3/5 sao và quy định Điều ước của Sumo ở mốc 5. Tạm ẩn chỉ ngăn yêu cầu mới; yêu cầu cũ vẫn được duyệt, từ chối và trao quà bình thường. Mỗi yêu cầu lưu bản chụp tên/mô tả/giai đoạn lúc xin quà, nên chỉnh sửa sau không thay lịch sử hay số dư. Dữ liệu cũ thiếu các trường mới vẫn tương thích. Sao lưu và liên kết chuyển thiết bị mang theo cấu hình quà. `python3 tests/rewards-ui.py` kiểm thử biểu mẫu trên màn hình điện thoại với server đang chạy.
+
+## Đồng bộ tự động (tùy chọn)
+Góc của mẹ → Đồng bộ tự động giữ tiến độ khớp giữa các thiết bị qua Firestore (Google), gọi bằng `fetch`, không dùng SDK. Cấu hình một lần trong `src/sync-config.js` theo `docs/dong-bo-firebase.md`; để trống thì tính năng tắt và app vẫn chạy cục bộ như cũ. Ghép nối bằng mã ngẫu nhiên 24 ký tự (ai có mã đọc được tiến độ). Không đồng bộ PIN. Bản ghi sau cùng thắng; bản cũ được cất ở `sumo-adventure-v1-before-sync`. Dữ liệu đồng bộ gồm tiến độ, xu, sao, linh thú, từ vựng và lịch sử quà (không tên hay thông tin cá nhân). Chưa kiểm thử trên iPhone thật. Test: `tests/sync.test.js`.

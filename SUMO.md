@@ -16,6 +16,7 @@
 - Mẹ tự nhập từ vựng, app tự dựng cấp mới (20 từ/cấp).
 - Màn học một trang, nút xác nhận ở đáy.
 - PWA, ngoại tuyến, chuyển tiến độ qua liên kết hoặc JSON.
+- Đồng bộ tự động bằng Firebase Firestore (REST, không SDK), mã ghép nối 24 ký tự, bản sau cùng thắng, không đồng bộ PIN. Mẹ đã duyệt; iPhone dùng Safari.
 - Mốc `main` hiện tại: PR #2 đã merge (commit `1fb802b`).
 
 ## Bản đồ
@@ -27,10 +28,12 @@
 | Cảnh Sumo cưỡi linh thú | `src/rider.js` |
 | Hình minh họa từ | `src/illustration.js` |
 | Mẹ nhập từ vựng | `src/vocab.js` |
-| Chuyển tiến độ | `src/transfer.js` |
+| Chuyển tiến độ thủ công | `src/transfer.js` |
+| Đồng bộ tự động (Firebase) | `src/sync.js`, `src/sync-config.js`, `docs/dong-bo-firebase.md` |
 | Nội dung bài học | `data/curriculum.json` |
 | Cache ngoại tuyến | `sw.js`, `manifest.webmanifest` |
 | Kiểm thử | `tests/` |
 
 ## Việc tiếp theo
-- (Điền khi có yêu cầu mới.)
+- Chờ `projectId` và `apiKey` Firebase của mẹ để điền `src/sync-config.js`, rồi mẹ thử trên iPhone thật.
+- Có thể thêm: nút khôi phục từ bản `-recovery` và `-before-sync` trong Góc của mẹ.
