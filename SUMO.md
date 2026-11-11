@@ -11,7 +11,9 @@
 - Mỗi lần sửa: chạy `npm test` và `npm run validate` trước khi commit.
 
 ## Đã chốt (tính đến 2026-11-11)
-- 5 cấp, 100 mục có nội dung. Bản đồ 100 cấp, phần chưa có nội dung bị khóa.
+- 20 cấp, 400 mục có nội dung (cấp 6–20 soạn thêm ngày 2026-11-11). Bản đồ 100 cấp, phần chưa có nội dung bị khóa.
+- Mẫu một cấp: 20 mục, `difficulty` = số cấp, ID `Lccc-nn`, đủ trường như cấp 1–5, ví dụ phải chứa từ học.
+- Thêm cấp có sẵn mới thì tăng độ dài `data/curriculum.json` và cập nhật test `engine.test.js`; `migrateBase` tự dịch tiến độ cấp từ mẹ nhập.
 - Linh thú thay cửa hàng avatar. Sumo điều khiển linh thú, trang phục đổi theo giai đoạn.
 - Mẹ tự nhập từ vựng, app tự dựng cấp mới (20 từ/cấp).
 - Màn học một trang, nút xác nhận ở đáy.
