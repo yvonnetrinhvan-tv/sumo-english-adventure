@@ -142,3 +142,8 @@ body.playing main{padding:0;max-width:none;min-height:0}
 @keyframes swing{50%{transform:rotate(7deg)}}
 @keyframes spin{to{transform:rotate(360deg)}}
 @media(max-width:650px){.pets-hero{grid-template-columns:1fr}.hero-pet{margin-top:8px}}
+.cloze{font-size:1.5rem;font-weight:700;margin:.6rem 0;text-align:center}
+.mask{display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem;font-size:2rem;font-weight:700;margin:.6rem 0}
+.mask span{min-width:1.3ch;text-align:center}
+.mask .blank{display:inline-block;min-width:1.3ch;border-bottom:4px solid currentColor;height:1.2em}
+.mask .gap-space{min-width:1rem}
