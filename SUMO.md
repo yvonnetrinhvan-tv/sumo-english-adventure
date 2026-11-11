@@ -7,6 +7,7 @@
 ## Quy ước làm việc
 - Chat này là nơi DUY NHẤT sửa app. Chat cũ không sửa app nữa.
 - Nhánh làm việc: `claude/lucid-brahmagupta-xh0or2`. Nhánh phát hành: `main`.
+- BẮT BUỘC: mọi cập nhật giữ tiến độ học cũ. Không đổi khóa lưu `sumo-adventure-v1`, không xóa/đổi tên ID mục học (`tests/fixtures/item-ids.json`), trường mới phải có giá trị mặc định trong `normalize()`. Đổi cấu trúc dữ liệu thì viết bước nâng cấp, không bỏ dữ liệu cũ. `npm test` kiểm tra các điều này (`tests/progress-safety.test.js`).
 - Mỗi lần sửa: chạy `npm test` và `npm run validate` trước khi commit.
 
 ## Đã chốt (tính đến 2026-11-11)

@@ -1,0 +1,7 @@
+import{test}from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import * as E from '../src/engine.js';
+const levels=JSON.parse(fs.readFileSync(new URL('../data/curriculum.json',import.meta.url)));
+const ids=JSON.parse(fs.readFileSync(new URL('./fixtures/item-ids.json',import.meta.url)));
+test('updates may add lesson items but never remove or rename shipped item IDs (keeps mastery)',()=>{const now=new Set(levels.flatMap(l=>l.items.map(e=>e.id)));for(const id of ids)assert.ok(now.has(id),'missing shipped item id '+id);});
+test('a save from an older version (no pets/vocab) loads with all progress intact',()=>{let s=E.fresh();E.complete(s,1,10);E.complete(s,2,9);E.record(s,levels[0].items[0].id,true);s.stars=2;s.coins=250;delete s.pets;delete s.vocab;const old=JSON.parse(JSON.stringify(s));const n=E.normalize(JSON.parse(JSON.stringify(old)));assert.deepEqual(n.completed,old.completed);assert.equal(n.coins,250);assert.equal(n.stars,2);assert.deepEqual(n.mastery,old.mastery);assert.ok(n.pets);assert.deepEqual(n.vocab,[]);});
+test('normalize never drops existing data: round trip is lossless for a progressed save',()=>{let s=E.fresh();for(let i=1;i<=3;i++)E.complete(s,i,10);E.record(s,levels[0].items[1].id,false);const before=JSON.stringify(s);assert.equal(JSON.stringify(E.normalize(JSON.parse(before))),before);});
+test('app keeps a recovery copy of unreadable saves instead of overwriting them',()=>{const src=fs.readFileSync(new URL('../src/app.js',import.meta.url),'utf8');assert.match(src,/KEY\+'-recovery'/);});
