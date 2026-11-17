@@ -16,6 +16,12 @@ Biến đam mê thành nghề nghiệp có thu nhập xứng đáng cùng Phòng
 🤝 Đồng hành cùng đội ngũ lãnh đạo giàu kinh nghiệm hỗ trợ
 🏢 Môi trường làm việc chuyên nghiệp
 
+🎁 PHÚC LỢI
+🛡️ BHXH, BHYT, BHTN
+🎉 Thưởng lễ, Tết, KPI
+✈️ Du lịch, team building
+❤️ Chăm sóc sức khỏe
+
 📩 CÁCH ỨNG TUYỂN
 Gọi hoặc nhắn Zalo cho chị Mai, kèm: họ tên, năm sinh, trường/nơi làm việc hiện tại.
 
@@ -36,6 +42,7 @@ Gọi hoặc nhắn Zalo cho chị Mai, kèm: họ tên, năm sinh, trường/n�
 📊 Đào tạo kỹ năng, kiến thức bán hàng hiệu quả
 🤝 Đồng hành cùng lãnh đạo giàu kinh nghiệm
 🏢 Môi trường chuyên nghiệp
+🎁 Phúc lợi: BHXH, BHYT, BHTN · Thưởng lễ, Tết, KPI · Du lịch, team building · Chăm sóc sức khỏe
 📍 1-3 Đường B4, KĐT Sala, P. An Khánh, TP.HCM
 📞 Chị Mai: 0939 055 373
 ✉ mai.phamthi@vndirect.com.vn
