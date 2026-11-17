@@ -3,57 +3,64 @@
 :root{--o:#ff7a00;--o2:#ffb347;--n:#0c1a3d}
 *{box-sizing:border-box;margin:0;padding:0}
 body{width:1080px;height:1350px;font-family:"Inter","Segoe UI",Arial,"Noto Sans",sans-serif;color:#fff;position:relative;overflow:hidden;
-background:radial-gradient(circle at 90% 6%,#ff7a0066 0,#ff7a0000 42%),radial-gradient(circle at 5% 55%,#2f5bd633 0,#0000 40%),linear-gradient(170deg,#12275a,#0a1530 70%)}
-.chart{position:absolute;left:0;top:90px;width:1080px;height:760px}
-.hd{position:absolute;top:36px;left:0;right:0;text-align:center}.hd img{width:470px;display:block;margin:0 auto}
-.logo{background:#fff;border-radius:18px;padding:10px 28px 12px;box-shadow:0 8px 24px #0006}
-.logo b{display:block;font-size:54px;font-weight:900;color:var(--o);letter-spacing:2px;line-height:1}
-.logo small{display:block;font-size:15px;font-weight:700;color:var(--n);letter-spacing:1px;margin-top:2px}
-.hot{background:var(--o);font-weight:900;font-size:30px;padding:14px 30px;border-radius:50px;box-shadow:0 0 0 6px #ff7a0044}
-.main{position:absolute;top:196px;left:40px;right:40px;text-align:center}
-.k{font-size:38px;font-weight:800;letter-spacing:5px;color:var(--o2)}
-h1{font-size:74px;line-height:1.04;font-weight:900;text-transform:uppercase;margin-top:6px;text-shadow:0 4px 20px #0008}
+background:radial-gradient(circle at 88% 4%,#ff7a0055 0,#ff7a0000 40%),radial-gradient(circle at 0% 60%,#2f5bd640 0,#0000 45%),linear-gradient(175deg,#0f2250,#070f26 75%)}
+.bg{position:absolute;inset:0;width:1080px;height:1350px}
+.logo{position:absolute;top:24px;left:0;right:0;text-align:center;font-size:92px;font-weight:900;letter-spacing:4px;line-height:1}
+.logo span{color:var(--o)}
+.logo small{display:block;font-size:22px;font-weight:700;letter-spacing:9px;color:var(--o2);margin-top:8px}
+.main{position:absolute;top:174px;left:40px;right:40px;text-align:center}
+.k{font-size:36px;font-weight:800;letter-spacing:5px;color:var(--o2)}
+h1{font-size:74px;line-height:1.04;font-weight:900;text-transform:uppercase;margin-top:4px;text-shadow:0 4px 20px #0009}
 h1 span{color:var(--o)}
-.chip{display:inline-block;margin-top:18px;background:var(--o);font-size:31px;font-weight:800;padding:10px 28px;border-radius:14px}
-.slo{font-size:33px;font-weight:700;margin-top:20px;line-height:1.25;text-shadow:0 3px 14px #000a}
-.slo em{font-style:normal;color:var(--o2)}
-.req{position:absolute;top:584px;left:56px;right:56px;background:#ffffff;color:var(--n);border-radius:22px;padding:16px 26px;display:flex;align-items:center;gap:20px;border-left:14px solid var(--o)}
-.req i{font-style:normal;font-size:52px}
-.req p{font-size:28px;font-weight:600;line-height:1.25}
+.chip{display:inline-block;margin-top:14px;background:#ffffff1c;border:2px solid var(--o);font-size:29px;font-weight:800;padding:8px 26px;border-radius:14px}
+.slo{position:absolute;top:452px;left:40px;right:40px;text-align:center;background:linear-gradient(120deg,#e85d00,#ff9a2e);border-radius:28px;padding:20px 20px 22px;box-shadow:0 0 0 5px #ffffff22,0 14px 40px #000a}
+.slo p{font-size:50px;font-weight:900;line-height:1.1;text-transform:uppercase;text-shadow:0 3px 10px #0006}
+.slo em{font-style:normal;display:inline-block;margin-top:6px;background:#fff;color:#e85d00;border-radius:14px;padding:2px 22px;text-shadow:none}
+.req{position:absolute;top:630px;left:56px;right:56px;background:#fff;color:var(--n);border-radius:20px;padding:14px 24px;display:flex;align-items:center;gap:18px;border-left:14px solid var(--o)}
+.req i{font-style:normal;font-size:46px}
+.req p{font-size:27px;font-weight:600;line-height:1.25}
 .req b{color:#e85d00;font-weight:900}
-.bt{position:absolute;top:704px;left:0;right:0;text-align:center;font-size:34px;font-weight:900;letter-spacing:4px;color:var(--o2)}
-.grid{position:absolute;top:756px;left:56px;right:56px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.c{background:#ffffff14;border:2px solid #ff7a00aa;border-radius:24px;padding:15px 20px;display:flex;gap:16px;align-items:center;backdrop-filter:blur(4px)}
-.c .ic{flex:none;width:76px;height:76px;border-radius:22px;background:linear-gradient(135deg,#ffb347,#ff6a00);display:flex;align-items:center;justify-content:center;font-size:46px}
-.c b{display:block;font-size:30px;font-weight:900;color:#ffb347;line-height:1.1;text-transform:uppercase}
-.c span{display:block;font-size:25px;font-weight:500;margin-top:6px;line-height:1.25;color:#eef2ff}
-.cta{position:absolute;left:0;right:0;bottom:0;height:200px;background:linear-gradient(120deg,#e85d00,#ff9a2e);border-radius:40px 40px 0 0;text-align:center;padding-top:14px;box-shadow:0 -10px 40px #0007}
-.cta h2{font-size:26px;font-weight:900;letter-spacing:3px}
-.cta .n{font-size:22px;font-weight:700;margin-top:0}
-.cta .ph{display:inline-block;background:#fff;color:#e85d00;font-size:40px;font-weight:900;border-radius:60px;padding:0 30px;margin-top:6px}
-.cta .l{font-size:21px;font-weight:600;margin-top:8px;line-height:1.3}
+.grid{position:absolute;top:748px;left:56px;right:56px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.c{background:#0b1736cc;border:2px solid #ff7a00aa;border-radius:24px;padding:16px 20px;display:flex;gap:16px;align-items:center}
+.c .ic{flex:none;width:76px;height:76px;border-radius:22px;background:linear-gradient(135deg,#ffb347,#ff6a00);display:flex;align-items:center;justify-content:center;font-size:42px}
+.c b{display:block;font-size:29px;font-weight:900;color:#ffb347;line-height:1.1;text-transform:uppercase}
+.c span{display:block;font-size:24px;font-weight:500;margin-top:6px;line-height:1.25;color:#eef2ff}
+.ft{position:absolute;left:0;right:0;bottom:0;height:236px;background:linear-gradient(120deg,#e85d00,#ff9a2e);border-radius:40px 40px 0 0;padding:26px 50px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 -10px 40px #0007}
+.ft h2{font-size:30px;font-weight:900;letter-spacing:2px}
+.ft .n{font-size:22px;font-weight:700;margin-top:6px;opacity:.95}
+.ft .ph{font-size:44px;font-weight:900;margin-top:4px;letter-spacing:1px}
+.ft .l{font-size:21px;font-weight:600;margin-top:6px;line-height:1.45}
+.qr{text-align:center}
+.qr .b{background:#fff;border-radius:18px;padding:8px;width:156px;height:156px}
+.qr img{width:100%;height:100%;display:block}
+.qr p{font-size:19px;font-weight:800;margin-top:8px;line-height:1.2}
 </style></head><body>
-<svg class="chart" viewBox="0 0 1080 760" xmlns="http://www.w3.org/2000/svg">
-<defs><linearGradient id="ar" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#ff8a1f" stop-opacity="0"/><stop offset="1" stop-color="#ffb347"/></linearGradient></defs>
-<g opacity=".28"><line x1="50" y1="465" x2="50" y2="655" stroke="#ff8a1f" stroke-width="4"/><rect x="33" y="490" width="34" height="140" rx="5" fill="#ff8a1f"/><line x1="114" y1="485" x2="114" y2="645" stroke="#ffffff" stroke-width="4"/><rect x="97" y="510" width="34" height="110" rx="5" fill="#ffffff"/><line x1="178" y1="445" x2="178" y2="625" stroke="#ff8a1f" stroke-width="4"/><rect x="161" y="470" width="34" height="130" rx="5" fill="#ff8a1f"/><line x1="242" y1="465" x2="242" y2="615" stroke="#ff8a1f" stroke-width="4"/><rect x="225" y="490" width="34" height="100" rx="5" fill="#ff8a1f"/><line x1="306" y1="415" x2="306" y2="595" stroke="#ffffff" stroke-width="4"/><rect x="289" y="440" width="34" height="130" rx="5" fill="#ffffff"/><line x1="370" y1="425" x2="370" y2="575" stroke="#ff8a1f" stroke-width="4"/><rect x="353" y="450" width="34" height="100" rx="5" fill="#ff8a1f"/><line x1="434" y1="375" x2="434" y2="555" stroke="#ff8a1f" stroke-width="4"/><rect x="417" y="400" width="34" height="130" rx="5" fill="#ff8a1f"/><line x1="498" y1="385" x2="498" y2="535" stroke="#ffffff" stroke-width="4"/><rect x="481" y="410" width="34" height="100" rx="5" fill="#ffffff"/><line x1="562" y1="335" x2="562" y2="515" stroke="#ff8a1f" stroke-width="4"/><rect x="545" y="360" width="34" height="130" rx="5" fill="#ff8a1f"/><line x1="626" y1="345" x2="626" y2="495" stroke="#ff8a1f" stroke-width="4"/><rect x="609" y="370" width="34" height="100" rx="5" fill="#ff8a1f"/><line x1="690" y1="295" x2="690" y2="475" stroke="#ffffff" stroke-width="4"/><rect x="673" y="320" width="34" height="130" rx="5" fill="#ffffff"/><line x1="754" y1="285" x2="754" y2="455" stroke="#ff8a1f" stroke-width="4"/><rect x="737" y="310" width="34" height="120" rx="5" fill="#ff8a1f"/><line x1="818" y1="245" x2="818" y2="435" stroke="#ff8a1f" stroke-width="4"/><rect x="801" y="270" width="34" height="140" rx="5" fill="#ff8a1f"/><line x1="882" y1="255" x2="882" y2="405" stroke="#ffffff" stroke-width="4"/><rect x="865" y="280" width="34" height="100" rx="5" fill="#ffffff"/><line x1="946" y1="205" x2="946" y2="385" stroke="#ff8a1f" stroke-width="4"/><rect x="929" y="230" width="34" height="130" rx="5" fill="#ff8a1f"/><line x1="1010" y1="195" x2="1010" y2="355" stroke="#ff8a1f" stroke-width="4"/><rect x="993" y="220" width="34" height="110" rx="5" fill="#ff8a1f"/></g>
-<path d="M30 700 Q300 640 460 520 T800 300 T1010 70" fill="none" stroke="url(#ar)" stroke-width="16" stroke-linecap="round"/>
-<path d="M1010 70 L930 92 M1010 70 L988 150" stroke="#ffb347" stroke-width="16" stroke-linecap="round"/>
+<svg class="bg" viewBox="0 0 1080 1350" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff8a1f" stop-opacity=".45"/><stop offset="1" stop-color="#ff8a1f" stop-opacity="0"/></linearGradient>
+<filter id="gl"><feGaussianBlur stdDeviation="8"/></filter>
+</defs>
+<line x1="0" y1="100" x2="1080" y2="100" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="190" x2="1080" y2="190" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="280" x2="1080" y2="280" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="370" x2="1080" y2="370" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="460" x2="1080" y2="460" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="550" x2="1080" y2="550" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="640" x2="1080" y2="640" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="730" x2="1080" y2="730" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="820" x2="1080" y2="820" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="910" x2="1080" y2="910" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="1000" x2="1080" y2="1000" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="1090" x2="1080" y2="1090" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="1180" x2="1080" y2="1180" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="1270" x2="1080" y2="1270" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="0" x2="0" y2="1350" stroke="#fff" stroke-opacity=".05"/><line x1="90" y1="0" x2="90" y2="1350" stroke="#fff" stroke-opacity=".05"/><line x1="180" y1="0" x2="180" y2="1350" stroke="#fff" stroke-opacity=".05"/><line x1="270" y1="0" x2="270" y2="1350" stroke="#fff" stroke-opacity=".05"/><line x1="360" y1="0" x2="360" y2="1350" stroke="#fff" stroke-opacity=".05"/><line x1="450" y1="0" x2="450" y2="1350" stroke="#fff" stroke-opacity=".05"/><line x1="540" y1="0" x2="540" y2="1350" stroke="#fff" stroke-opacity=".05"/><line x1="630" y1="0" x2="630" y2="1350" stroke="#fff" stroke-opacity=".05"/><line x1="720" y1="0" x2="720" y2="1350" stroke="#fff" stroke-opacity=".05"/><line x1="810" y1="0" x2="810" y2="1350" stroke="#fff" stroke-opacity=".05"/><line x1="900" y1="0" x2="900" y2="1350" stroke="#fff" stroke-opacity=".05"/><line x1="990" y1="0" x2="990" y2="1350" stroke="#fff" stroke-opacity=".05"/><line x1="1080" y1="0" x2="1080" y2="1350" stroke="#fff" stroke-opacity=".05"/>
+<g opacity=".22"><line x1="40" y1="1076" x2="40" y2="1196" stroke="#ff9a2e" stroke-width="3"/><rect x="25" y="1106" width="30" height="60" rx="4" fill="#ff9a2e"/><line x1="100" y1="1067" x2="100" y2="1194" stroke="#6f86c9" stroke-width="3"/><rect x="85" y="1097" width="30" height="67" rx="4" fill="#6f86c9"/><line x1="160" y1="994" x2="160" y2="1128" stroke="#ff9a2e" stroke-width="3"/><rect x="145" y="1024" width="30" height="74" rx="4" fill="#ff9a2e"/><line x1="220" y1="985" x2="220" y2="1126" stroke="#ff9a2e" stroke-width="3"/><rect x="205" y="1015" width="30" height="81" rx="4" fill="#ff9a2e"/><line x1="280" y1="912" x2="280" y2="1060" stroke="#6f86c9" stroke-width="3"/><rect x="265" y="942" width="30" height="88" rx="4" fill="#6f86c9"/><line x1="340" y1="903" x2="340" y2="1058" stroke="#ff9a2e" stroke-width="3"/><rect x="325" y="933" width="30" height="95" rx="4" fill="#ff9a2e"/><line x1="400" y1="830" x2="400" y2="992" stroke="#ff9a2e" stroke-width="3"/><rect x="385" y="860" width="30" height="102" rx="4" fill="#ff9a2e"/><line x1="460" y1="821" x2="460" y2="990" stroke="#6f86c9" stroke-width="3"/><rect x="445" y="851" width="30" height="109" rx="4" fill="#6f86c9"/><line x1="520" y1="798" x2="520" y2="924" stroke="#ff9a2e" stroke-width="3"/><rect x="505" y="828" width="30" height="66" rx="4" fill="#ff9a2e"/><line x1="580" y1="789" x2="580" y2="922" stroke="#ff9a2e" stroke-width="3"/><rect x="565" y="819" width="30" height="73" rx="4" fill="#ff9a2e"/><line x1="640" y1="716" x2="640" y2="856" stroke="#6f86c9" stroke-width="3"/><rect x="625" y="746" width="30" height="80" rx="4" fill="#6f86c9"/><line x1="700" y1="707" x2="700" y2="854" stroke="#ff9a2e" stroke-width="3"/><rect x="685" y="737" width="30" height="87" rx="4" fill="#ff9a2e"/><line x1="760" y1="634" x2="760" y2="788" stroke="#ff9a2e" stroke-width="3"/><rect x="745" y="664" width="30" height="94" rx="4" fill="#ff9a2e"/><line x1="820" y1="625" x2="820" y2="786" stroke="#6f86c9" stroke-width="3"/><rect x="805" y="655" width="30" height="101" rx="4" fill="#6f86c9"/><line x1="880" y1="552" x2="880" y2="720" stroke="#ff9a2e" stroke-width="3"/><rect x="865" y="582" width="30" height="108" rx="4" fill="#ff9a2e"/><line x1="940" y1="593" x2="940" y2="718" stroke="#ff9a2e" stroke-width="3"/><rect x="925" y="623" width="30" height="65" rx="4" fill="#ff9a2e"/><line x1="1000" y1="520" x2="1000" y2="652" stroke="#6f86c9" stroke-width="3"/><rect x="985" y="550" width="30" height="72" rx="4" fill="#6f86c9"/><line x1="1060" y1="511" x2="1060" y2="650" stroke="#ff9a2e" stroke-width="3"/><rect x="1045" y="541" width="30" height="79" rx="4" fill="#ff9a2e"/></g>
+<path d="M0 1130 C150 1100 220 1150 330 1020 S520 960 600 840 S800 700 900 520 S1010 330 1080 250 L1080 1350 L0 1350Z" fill="url(#fill)" opacity=".5"/>
+<path d="M0 1130 C150 1100 220 1150 330 1020 S520 960 600 840 S800 700 900 520 S1010 330 1080 250" fill="none" stroke="#ffb347" stroke-width="12" filter="url(#gl)" opacity=".7"/>
+<path d="M0 1130 C150 1100 220 1150 330 1020 S520 960 600 840 S800 700 900 520 S1010 330 1080 250" fill="none" stroke="#ffd08a" stroke-width="5" stroke-linecap="round"/>
 </svg>
-<div class="hd"><img src="vndirect-logo.png" alt="VNDIRECT"></div>
+<div class="logo">VNDIRECT <span>SALA</span><small>YOUR INVESTMENT HOME</small></div>
 <div class="main"><div class="k">🔥 ĐANG TUYỂN DỤNG</div>
 <h1>Thực tập sinh &<br><span>Nhân viên chính thức</span></h1>
-<div class="chip">Phòng DVCK 23 · PGD Thủ Đức</div>
-<div class="slo">Biến đam mê chứng khoán thành <em>thu nhập xứng đáng</em></div></div>
+<div class="chip">Phòng DVCK 23 · PGD Thủ Đức</div></div>
+<div class="slo"><p>Biến đam mê chứng khoán thành<br><em>thu nhập xứng đáng</em></p></div>
 <div class="req"><i>🎓</i><p><b>ĐỐI TƯỢNG:</b> Sinh viên, cử nhân ngành <b>Kinh tế</b>, <b>Tài chính – Ngân hàng</b> và đam mê chứng khoán</p></div>
-<div class="bt">— QUYỀN LỢI KHI GIA NHẬP —</div>
 <div class="grid">
 <div class="c"><div class="ic">💰</div><div><b>Thu nhập xứng đáng</b><span>Tương xứng với công sức bạn bỏ ra</span></div></div>
 <div class="c"><div class="ic">📊</div><div><b>Đào tạo kỹ năng bán hàng</b><span>Kiến thức, kỹ năng bán hàng hiệu quả</span></div></div>
 <div class="c"><div class="ic">🤝</div><div><b>Lãnh đạo đồng hành</b><span>Cùng đội ngũ lãnh đạo giàu kinh nghiệm hỗ trợ</span></div></div>
 <div class="c"><div class="ic">🏢</div><div><b>Môi trường chuyên nghiệp</b><span>Làm việc bài bản, chuyên nghiệp</span></div></div>
 </div>
-<div class="cta"><h2>ỨNG TUYỂN NGAY</h2>
+<div class="ft"><div><h2>ỨNG TUYỂN NGAY</h2>
 <div class="n">Chị Phạm Thị Ngọc Mai – Trưởng phòng DVCK 23</div>
 <div class="ph">📞 0939 055 373</div>
 <div class="l">✉ mai.phamthi@vndirect.com.vn<br>📍 1-3 Đường B4, KĐT Sala, P. An Khánh, TP.HCM</div></div>
+<div class="qr"><div class="b"><img src="qr-zalo.png" alt="QR Zalo"></div><p>Quét mã<br>chat Zalo</p></div></div>
 </body></html>
