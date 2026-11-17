@@ -1,53 +1,63 @@
 <!doctype html><html lang="vi"><head><meta charset="utf-8"><style>
-:root{--o:#ff7a00;--o2:#ffb347;--n:#0c1a3d}
+:root{--o:#ff7a00;--o2:#ffa94d;--n:#0a1630}
 *{box-sizing:border-box;margin:0;padding:0}
 body{width:1080px;height:675px;font-family:"Inter Display","Inter","Segoe UI",Arial,sans-serif;color:#fff;position:relative;overflow:hidden;
-background:radial-gradient(circle at 92% 8%,#ff7a0055 0,#ff7a0000 40%),linear-gradient(160deg,#0f2250,#070f26 80%)}
-.bg{position:absolute;inset:0}
-.L{position:absolute;left:44px;top:26px;width:620px}
-.logo{font-size:38px;font-weight:900;letter-spacing:2px;line-height:1}
+background:radial-gradient(900px 500px at 100% 0%,#ff7a0038 0,#0000 60%),radial-gradient(700px 500px at 0% 100%,#2c55c533 0,#0000 60%),linear-gradient(135deg,#0d1d44,#08112a)}
+.grid{position:absolute;inset:0;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:45px 45px}
+.L{position:absolute;left:56px;top:34px;width:560px}
+.logo{font-size:30px;font-weight:900;letter-spacing:3px;display:flex;align-items:center;gap:12px}
 .logo span{color:var(--o)}
-.logo small{font-size:13px;font-weight:700;letter-spacing:5px;color:var(--o2);margin-left:14px;vertical-align:middle}
-.tag{display:inline-block;margin-top:14px;background:var(--o);font-size:16px;font-weight:800;letter-spacing:2px;padding:6px 16px;border-radius:30px}
-h1{font-size:44px;line-height:1.08;font-weight:800;letter-spacing:-.5px;text-transform:uppercase;margin-top:10px}
+.logo i{display:block;width:44px;height:3px;background:var(--o);border-radius:2px}
+.ov{margin-top:22px;font-size:13.5px;font-weight:700;letter-spacing:3px;color:var(--o2)}
+h1{margin-top:10px;font-size:43px;line-height:1.1;font-weight:800;letter-spacing:.2px;text-transform:uppercase}
 h1 span{color:var(--o)}
-.chip{display:inline-block;margin-top:8px;font-size:18px;font-weight:700;color:var(--o2);border-left:4px solid var(--o);padding-left:10px}
-.slo{margin-top:14px;background:linear-gradient(120deg,#e85d00,#ff9a2e);border-radius:16px;padding:12px 20px 14px;box-shadow:0 8px 24px #0008}
-.slo p{font-size:24px;font-weight:800;text-transform:uppercase;line-height:1.1}
-.slo em{font-style:normal;display:inline-block;margin-top:6px;background:#fff;color:#e85d00;font-size:34px;font-weight:900;border-radius:10px;padding:0 14px;line-height:1.2}
-.req{margin-top:12px;font-size:16px;font-weight:500;line-height:1.35;color:#e8eeff}
-.req b{color:var(--o2);font-weight:800}
-.ben{margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:8px 14px}
-.ben div{font-size:15.5px;font-weight:600;line-height:1.25;background:#ffffff14;border:1px solid #ff7a0088;border-radius:10px;padding:7px 10px 7px 34px;position:relative}
-.ben div:before{content:"✔";position:absolute;left:11px;top:7px;color:var(--o);font-weight:900}
-.ben b{color:var(--o2)}
-.R{position:absolute;right:40px;top:26px;width:350px;height:420px;border-radius:26px;overflow:hidden;background:linear-gradient(150deg,#ff9a2e,#e85d00);box-shadow:0 12px 40px #000a}
-.R svg{position:absolute;inset:0}
-.R .big{position:absolute;left:20px;top:18px;font-size:19px;font-weight:800;letter-spacing:2px;opacity:.95}
-.qr{position:absolute;right:40px;top:462px;width:350px;display:flex;align-items:center;gap:14px;background:#fff;color:var(--n);border-radius:18px;padding:8px 14px}
-.qr img{width:92px;height:92px}
-.qr p{font-size:17px;font-weight:700;line-height:1.25} .qr b{color:#e85d00}
-.ft{position:absolute;left:0;right:0;bottom:0;height:64px;background:#e85d00;display:flex;align-items:center;justify-content:center;gap:22px;font-size:15px;font-weight:600;white-space:nowrap}
+.q{margin-top:22px;padding-left:18px;border-left:4px solid var(--o)}
+.q p{font-size:25px;font-weight:500;color:#dfe7ff;letter-spacing:.2px}
+.q b{display:block;margin-top:2px;font-size:44px;font-weight:900;text-transform:uppercase;letter-spacing:.5px;background:linear-gradient(90deg,#ffb347,#ff6a00);-webkit-background-clip:text;color:transparent}
+.chips{margin-top:24px;display:flex;gap:10px;align-items:center;font-size:14px;font-weight:600;color:#aebbe0}
+.chips span.t{letter-spacing:2px;font-weight:700;font-size:12.5px}
+.chips em{font-style:normal;border:1px solid #ffffff40;border-radius:20px;padding:5px 13px;color:#fff;background:#ffffff0d}
+.ben{margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:20px 26px}
+.b{display:flex;gap:12px;align-items:flex-start}
+.b .ic{flex:none;width:44px;height:44px;border-radius:12px;border:1.5px solid #ff7a0099;background:#ff7a0018;display:flex;align-items:center;justify-content:center}
+.b h4{font-size:15.5px;font-weight:800;line-height:1.2}
+.b p{font-size:13.5px;font-weight:400;color:#b8c4e6;line-height:1.3;margin-top:2px}
+.R{position:absolute;left:640px;top:34px;width:384px}
+.dash{width:384px;height:395px;border-radius:22px;background:linear-gradient(160deg,#13275a,#0b1838);border:1px solid #ffffff22;box-shadow:0 24px 60px #000b,0 0 0 1px #ff7a0033;overflow:hidden;position:relative}
+.dash svg{position:absolute;left:-18px;top:0}
+.dh{position:absolute;left:18px;top:14px;display:flex;gap:6px}.dh i{width:9px;height:9px;border-radius:50%;background:#ffffff40}.dh i:first-child{background:var(--o)}
+.dt{position:absolute;right:18px;top:11px;font-size:12px;font-weight:700;letter-spacing:2px;color:var(--o2)}
+.qr{margin-top:16px;display:flex;align-items:center;gap:14px;background:#fff;color:var(--n);border-radius:18px;padding:10px 16px;box-shadow:0 12px 30px #0008}
+.qr img{width:84px;height:84px}
+.qr h5{font-size:17px;font-weight:800;color:#e85d00}
+.qr p{font-size:13.5px;font-weight:500;line-height:1.3;margin-top:3px}
+.ft{position:absolute;left:0;right:0;bottom:0;height:62px;background:#060d20;border-top:3px solid var(--o);display:flex;align-items:center;justify-content:center;gap:0;font-size:13.5px;font-weight:600;white-space:nowrap}
+.ft div{display:flex;align-items:center;gap:8px;padding:0 15px;border-right:1px solid #ffffff22}
+.ft div:last-child{border:none}
 .ft b{font-weight:800}
-</style></head><body>
-<svg class="bg" viewBox="0 0 1080 675" width="1080" height="675" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="45" x2="1080" y2="45" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="90" x2="1080" y2="90" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="135" x2="1080" y2="135" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="180" x2="1080" y2="180" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="225" x2="1080" y2="225" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="270" x2="1080" y2="270" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="315" x2="1080" y2="315" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="360" x2="1080" y2="360" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="405" x2="1080" y2="405" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="450" x2="1080" y2="450" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="495" x2="1080" y2="495" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="540" x2="1080" y2="540" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="585" x2="1080" y2="585" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="630" x2="1080" y2="630" stroke="#fff" stroke-opacity=".06"/><line x1="0" y1="0" x2="0" y2="675" stroke="#fff" stroke-opacity=".05"/><line x1="45" y1="0" x2="45" y2="675" stroke="#fff" stroke-opacity=".05"/><line x1="90" y1="0" x2="90" y2="675" stroke="#fff" stroke-opacity=".05"/><line x1="135" y1="0" x2="135" y2="675" stroke="#fff" stroke-opacity=".05"/><line x1="180" y1="0" x2="180" y2="675" stroke="#fff" stroke-opacity=".05"/><line x1="225" y1="0" x2="225" y2="675" stroke="#fff" stroke-opacity=".05"/><line x1="270" y1="0" x2="270" y2="675" stroke="#fff" stroke-opacity=".05"/><line x1="315" y1="0" x2="315" y2="675" stroke="#fff" stroke-opacity=".05"/><line x1="360" y1="0" x2="360" y2="675" stroke="#fff" stroke-opacity=".05"/><line x1="405" y1="0" x2="405" y2="675" stroke="#fff" stroke-opacity=".05"/><line x1="450" y1="0" x2="450" y2="675" stroke="#fff" stroke-opacity=".05"/><line x1="495" y1="0" x2="495" y2="675" stroke="#fff" stroke-opacity=".05"/><line x1="540" y1="0" x2="540" y2="675" stroke="#fff" stroke-opacity=".05"/><line x1="585" y1="0" x2="585" y2="675" stroke="#fff" stroke-opacity=".05"/><line x1="630" y1="0" x2="630" y2="675" stroke="#fff" stroke-opacity=".05"/><line x1="675" y1="0" x2="675" y2="675" stroke="#fff" stroke-opacity=".05"/><line x1="720" y1="0" x2="720" y2="675" stroke="#fff" stroke-opacity=".05"/><line x1="765" y1="0" x2="765" y2="675" stroke="#fff" stroke-opacity=".05"/><line x1="810" y1="0" x2="810" y2="675" stroke="#fff" stroke-opacity=".05"/><line x1="855" y1="0" x2="855" y2="675" stroke="#fff" stroke-opacity=".05"/><line x1="900" y1="0" x2="900" y2="675" stroke="#fff" stroke-opacity=".05"/><line x1="945" y1="0" x2="945" y2="675" stroke="#fff" stroke-opacity=".05"/><line x1="990" y1="0" x2="990" y2="675" stroke="#fff" stroke-opacity=".05"/><line x1="1035" y1="0" x2="1035" y2="675" stroke="#fff" stroke-opacity=".05"/><line x1="1080" y1="0" x2="1080" y2="675" stroke="#fff" stroke-opacity=".05"/>
-<defs><linearGradient id="f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff8a1f" stop-opacity=".35"/><stop offset="1" stop-color="#ff8a1f" stop-opacity="0"/></linearGradient></defs>
-<path d="M0 640 C150 620 220 600 330 560 S520 520 640 470 S850 380 1080 300 L1080 675 L0 675Z" fill="url(#f)"/>
-<path d="M0 640 C150 620 220 600 330 560 S520 520 640 470 S850 380 1080 300" fill="none" stroke="#ffb347" stroke-width="4" opacity=".6"/></svg>
+.ft .nm b{color:var(--o2)}
+</style></head><body><div class="grid"></div>
 <div class="L">
-<div class="logo">VNDIRECT <span>SALA</span><small>YOUR INVESTMENT HOME</small></div>
-<div class="tag">🔥 ĐANG TUYỂN DỤNG</div>
+<div class="logo">VNDIRECT <span>SALA</span><i></i></div>
+<div class="ov">TUYỂN DỤNG · PHÒNG DVCK 23 · PGD THỦ ĐỨC</div>
 <h1>Thực tập sinh &amp;<br><span>Nhân viên chính thức</span></h1>
-<div class="chip">Phòng Dịch vụ Chứng khoán 23 · PGD Thủ Đức</div>
-<div class="slo"><p>Biến đam mê chứng khoán thành</p><em>thu nhập xứng đáng</em></div>
-<div class="req">🎓 <b>Đối tượng:</b> ngành <b>Kinh tế</b>, <b>Tài chính – Ngân hàng</b> · đam mê chứng khoán</div>
-<div class="ben"><div><b>Thu nhập</b> xứng đáng với công sức</div><div>Đào tạo <b>kỹ năng, kiến thức bán hàng</b> hiệu quả</div><div>Đồng hành cùng <b>lãnh đạo giàu kinh nghiệm</b></div><div>Môi trường làm việc <b>chuyên nghiệp</b></div></div>
-</div>
-<div class="R"><div class="big">CƠ HỘI NGHỀ NGHIỆP</div>
-<svg viewBox="0 0 350 420" width="350" height="420"><g opacity=".5"><line x1="44" y1="270" x2="44" y2="338" stroke="#ff9a2e" stroke-width="3"/><rect x="33" y="286" width="22" height="36" rx="3" fill="#ff9a2e"/><line x1="82" y1="253" x2="82" y2="330" stroke="#fff" stroke-width="3"/><rect x="71" y="269" width="22" height="45" rx="3" fill="#fff"/><line x1="120" y1="200" x2="120" y2="286" stroke="#ff9a2e" stroke-width="3"/><rect x="109" y="216" width="22" height="54" rx="3" fill="#ff9a2e"/><line x1="158" y1="183" x2="158" y2="278" stroke="#ff9a2e" stroke-width="3"/><rect x="147" y="199" width="22" height="63" rx="3" fill="#ff9a2e"/><line x1="196" y1="164" x2="196" y2="234" stroke="#fff" stroke-width="3"/><rect x="185" y="180" width="22" height="38" rx="3" fill="#fff"/><line x1="234" y1="147" x2="234" y2="226" stroke="#ff9a2e" stroke-width="3"/><rect x="223" y="163" width="22" height="47" rx="3" fill="#ff9a2e"/><line x1="272" y1="94" x2="272" y2="182" stroke="#ff9a2e" stroke-width="3"/><rect x="261" y="110" width="22" height="56" rx="3" fill="#ff9a2e"/><line x1="310" y1="77" x2="310" y2="174" stroke="#fff" stroke-width="3"/><rect x="299" y="93" width="22" height="65" rx="3" fill="#fff"/><line x1="348" y1="58" x2="348" y2="130" stroke="#ff9a2e" stroke-width="3"/><rect x="337" y="74" width="22" height="40" rx="3" fill="#ff9a2e"/></g>
-<path d="M20 380 C90 360 130 330 180 270 S260 150 320 70" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
-<path d="M320 70 L262 82 M320 70 L308 128" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+<div class="q"><p>Biến đam mê chứng khoán thành</p><b>thu nhập xứng đáng</b></div>
+<div class="chips"><span class="t">ĐỐI TƯỢNG</span><em>Kinh tế</em><em>Tài chính – Ngân hàng</em><em>Đam mê chứng khoán</em></div>
+<div class="ben">
+<div class="b"><div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#ff8a1f" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div><h4>Thu nhập xứng đáng</h4><p>Tương xứng với công sức bạn bỏ ra</p></div></div>
+<div class="b"><div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#ff8a1f" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div><div><h4>Đào tạo bán hàng</h4><p>Kỹ năng, kiến thức bán hàng hiệu quả</p></div></div>
+<div class="b"><div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#ff8a1f" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div><h4>Lãnh đạo đồng hành</h4><p>Đội ngũ giàu kinh nghiệm hỗ trợ</p></div></div>
+<div class="b"><div class="ic"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#ff8a1f" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9v.01M9 13v.01M9 17v.01"/></svg></div><div><h4>Môi trường chuyên nghiệp</h4><p>Làm việc bài bản, chuyên nghiệp</p></div></div>
+</div></div>
+<div class="R"><div class="dash"><div class="dh"><i></i><i></i><i></i></div><div class="dt">THỊ TRƯỜNG CHỨNG KHOÁN</div>
+<svg viewBox="0 0 420 430" width="420" height="430">
+<defs><linearGradient id="a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff8a1f" stop-opacity=".4"/><stop offset="1" stop-color="#ff8a1f" stop-opacity="0"/></linearGradient></defs>
+<line x1="24" y1="80" x2="396" y2="80" stroke="#fff" stroke-opacity=".07"/><line x1="24" y1="130" x2="396" y2="130" stroke="#fff" stroke-opacity=".07"/><line x1="24" y1="180" x2="396" y2="180" stroke="#fff" stroke-opacity=".07"/><line x1="24" y1="230" x2="396" y2="230" stroke="#fff" stroke-opacity=".07"/><line x1="24" y1="280" x2="396" y2="280" stroke="#fff" stroke-opacity=".07"/><line x1="24" y1="330" x2="396" y2="330" stroke="#fff" stroke-opacity=".07"/>
+<polygon points="44,341 66,311 88,292 110,285 132,273 154,266 176,259 198,262 220,255 242,248 264,238 286,222 308,203 330,187 352,172 374,161 374,395 44,395" fill="url(#a)"/>
+<rect x="38" y="391" width="12" height="14" rx="2" fill="#ff8a1f" opacity=".45"/><rect x="60" y="363" width="12" height="42" rx="2" fill="#ff8a1f" opacity=".45"/><rect x="82" y="364" width="12" height="41" rx="2" fill="#ff8a1f" opacity=".45"/><rect x="104" y="373" width="12" height="32" rx="2" fill="#ff8a1f" opacity=".45"/><rect x="126" y="383" width="12" height="22" rx="2" fill="#ff8a1f" opacity=".45"/><rect x="148" y="367" width="12" height="38" rx="2" fill="#ff8a1f" opacity=".45"/><rect x="170" y="387" width="12" height="18" rx="2" fill="#7f93c9" opacity=".45"/><rect x="192" y="367" width="12" height="38" rx="2" fill="#7f93c9" opacity=".45"/><rect x="214" y="381" width="12" height="24" rx="2" fill="#ff8a1f" opacity=".45"/><rect x="236" y="361" width="12" height="44" rx="2" fill="#ff8a1f" opacity=".45"/><rect x="258" y="380" width="12" height="25" rx="2" fill="#ff8a1f" opacity=".45"/><rect x="280" y="389" width="12" height="16" rx="2" fill="#ff8a1f" opacity=".45"/><rect x="302" y="389" width="12" height="16" rx="2" fill="#ff8a1f" opacity=".45"/><rect x="324" y="369" width="12" height="36" rx="2" fill="#ff8a1f" opacity=".45"/><rect x="346" y="369" width="12" height="36" rx="2" fill="#ff8a1f" opacity=".45"/><rect x="368" y="361" width="12" height="44" rx="2" fill="#ff8a1f" opacity=".45"/><line x1="44" y1="326" x2="44" y2="388" stroke="#ff8a1f" stroke-width="2"/><rect x="38" y="339" width="12" height="33" rx="2" fill="#ff8a1f"/><line x1="66" y1="303" x2="66" y2="345" stroke="#ff8a1f" stroke-width="2"/><rect x="60" y="314" width="12" height="23" rx="2" fill="#ff8a1f"/><line x1="88" y1="291" x2="88" y2="323" stroke="#ff8a1f" stroke-width="2"/><rect x="82" y="304" width="12" height="4" rx="2" fill="#ff8a1f"/><line x1="110" y1="279" x2="110" y2="313" stroke="#ff8a1f" stroke-width="2"/><rect x="104" y="295" width="12" height="9" rx="2" fill="#ff8a1f"/><line x1="132" y1="272" x2="132" y2="306" stroke="#ff8a1f" stroke-width="2"/><rect x="126" y="283" width="12" height="9" rx="2" fill="#ff8a1f"/><line x1="154" y1="264" x2="154" y2="293" stroke="#ff8a1f" stroke-width="2"/><rect x="148" y="278" width="12" height="5" rx="2" fill="#ff8a1f"/><line x1="176" y1="257" x2="176" y2="284" stroke="#7f93c9" stroke-width="2"/><rect x="170" y="272" width="12" height="4" rx="2" fill="#7f93c9"/><line x1="198" y1="265" x2="198" y2="290" stroke="#7f93c9" stroke-width="2"/><rect x="192" y="273" width="12" height="6" rx="2" fill="#7f93c9"/><line x1="220" y1="256" x2="220" y2="285" stroke="#ff8a1f" stroke-width="2"/><rect x="214" y="266" width="12" height="7" rx="2" fill="#ff8a1f"/><line x1="242" y1="248" x2="242" y2="275" stroke="#ff8a1f" stroke-width="2"/><rect x="236" y="259" width="12" height="6" rx="2" fill="#ff8a1f"/><line x1="264" y1="237" x2="264" y2="263" stroke="#ff8a1f" stroke-width="2"/><rect x="258" y="249" width="12" height="6" rx="2" fill="#ff8a1f"/><line x1="286" y1="216" x2="286" y2="258" stroke="#ff8a1f" stroke-width="2"/><rect x="280" y="226" width="12" height="20" rx="2" fill="#ff8a1f"/><line x1="308" y1="202" x2="308" y2="238" stroke="#ff8a1f" stroke-width="2"/><rect x="302" y="210" width="12" height="15" rx="2" fill="#ff8a1f"/><line x1="330" y1="183" x2="330" y2="223" stroke="#ff8a1f" stroke-width="2"/><rect x="324" y="195" width="12" height="13" rx="2" fill="#ff8a1f"/><line x1="352" y1="164" x2="352" y2="208" stroke="#ff8a1f" stroke-width="2"/><rect x="346" y="179" width="12" height="14" rx="2" fill="#ff8a1f"/><line x1="374" y1="161" x2="374" y2="186" stroke="#ff8a1f" stroke-width="2"/><rect x="368" y="173" width="12" height="5" rx="2" fill="#ff8a1f"/>
+<polyline points="44,341 66,311 88,292 110,285 132,273 154,266 176,259 198,262 220,255 242,248 264,238 286,222 308,203 330,187 352,172 374,161" fill="none" stroke="#ffd08a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="374" cy="161" r="7" fill="#fff" stroke="#ff7a00" stroke-width="4"/>
 </svg></div>
-<div class="qr"><img src="qr-zalo.png"><p><b>Quét mã chat Zalo</b><br>với chị Ngọc Mai để ứng tuyển</p></div>
-<div class="ft"><span><b>Chị Phạm Thị Ngọc Mai</b> – Trưởng phòng</span><span>📞 <b>0939 055 373</b></span><span>✉ mai.phamthi@vndirect.com.vn</span><span>📍 1-3 Đường B4, KĐT Sala, P. An Khánh, TP.HCM</span></div>
+<div class="qr"><img src="qr-zalo.png"><div><h5>Quét mã Zalo để ứng tuyển</h5><p>Nhắn trực tiếp với chị Ngọc Mai,<br>Trưởng phòng DVCK 23</p></div></div></div>
+<div class="ft"><div class="nm" style="padding-left:0"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#ff8a1f" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg><span><b>Phạm Thị Ngọc Mai</b> – Trưởng phòng DVCK 23</span></div><div><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#ff8a1f" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><b>0939 055 373</b></div><div><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#ff8a1f" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>mai.phamthi@vndirect.com.vn</div><div><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#ff8a1f" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>1-3 Đường B4, KĐT Sala, P. An Khánh, TP.HCM</div></div>
 </body></html>
